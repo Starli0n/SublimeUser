@@ -1,0 +1,9 @@
+{
+    "cmd": ["C:\\Tools\\SublimeText\\Sublime.bat", "$file"],
+    "selector": "source.dosbatch",
+    "variants": [
+	    { "cmd": ["$file"],
+	      "name": "Run"
+	    }
+    ]
+}

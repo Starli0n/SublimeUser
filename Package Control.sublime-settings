@@ -1,0 +1,20 @@
+{
+	"installed_packages":
+	[
+		"Git",
+		"GitGutter",
+		"GoToClass",
+		"Insert Nums",
+		"LiveReload",
+		"Navigation History",
+		"Package Control",
+		"PHPUnit",
+		"SideBarEnhancements",
+		"WinMerge",
+		"Xdebug"
+	],
+	"repositories":
+	[
+		"https://github.com/Starli0n/Verbose.git"
+	]
+}

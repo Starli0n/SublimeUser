@@ -1,0 +1,22 @@
+[
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Settings – More",
+                "id": "settings_more",
+                "children":
+                [
+                    { "caption": "-" },
+                    { "command": "open_file", "args": {"file": "${packages}/User/Context.sublime-menu"}, "caption": "Context – User" },
+                    { "command": "open_file", "args": {"file": "${packages}/User/Main.sublime-menu"}, "caption": "Main – User" },
+                    { "command": "open_file", "args": {"file": "${packages}/User/Side Bar.sublime-menu"}, "caption": "Side Bar – User" },
+                    { "command": "open_file", "args": {"file": "${packages}/User/Tab Context.sublime-menu"}, "caption": "Tab Context – User" }
+                ]
+            }
+        ]
+    }
+]

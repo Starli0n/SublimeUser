@@ -1,0 +1,14 @@
+{
+	"packages": [
+		{
+			"name": "User",
+			"details": "https://github.com/Starli0n/SublimeUser.git",
+			"releases": [
+				{
+					"sublime_text": "*",
+					"details": "https://github.com/Starli0n/SublimeUser.git"
+				}
+			]
+		}
+	]
+}

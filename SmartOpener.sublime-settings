@@ -1,0 +1,14 @@
+{
+    "env":
+    [
+        { "Prod"	: "\\\\sudexp\\summit\\SudExp\\client\\ccffo\\" },
+        { "Pre"		: "\\\\sudd03\\Summitdev3\\SudPre\\client\\ccffo\\" },
+        { "Pre RW"	: "\\\\sudd03\\Summitdev3\\SudPre\\client\\ccfforw\\" },
+        { "Pre PLS"	: "\\\\sudd03\\Summitdev3\\SudPre\\client\\CcfFoPLS\\" },
+        { "CR" : "Z:\\Request\\CR_RecSummitPLS\\CcfFo\\" },
+        { "RTC Prod": "S:\\RTC\\PROD\\SCRIPTS\\nas0015\\SUMMIT\\SudExp\\client\\ccffo\\"},
+        { "RTC RTB": "S:\\RTC\\RTB\\SCRIPTS\\nas0015\\SUMMIT\\SudExp\\client\\ccffo\\"},
+        { "Prod": "S:\\RTC\\PROD\\"},
+        { "RTB": "S:\\RTC\\RTB\\"}
+    ]
+}
