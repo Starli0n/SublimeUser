@@ -5,10 +5,7 @@
 	"ignored_packages":
 	[
 		"Vintage",
-		"GoToClass",
-		"OpenFileFromEnv",
 		"PHPUnit",
-		"OpenUnderSelection",
 		"package_control_channel.git"
 	],
 	"remember_open_files": true,

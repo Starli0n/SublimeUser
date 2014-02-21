@@ -10,11 +10,14 @@
 		"Package Control",
 		"PHPUnit",
 		"SideBarEnhancements",
+		"SmartOpener",
+		"User",
+		"Verbose",
 		"WinMerge",
 		"Xdebug"
 	],
 	"repositories":
 	[
-		"https://github.com/Starli0n/Verbose.git"
-	]
+		"https://raw2.github.com/Starli0n/SublimeUser/master/User.json"
+ 	]
 }
