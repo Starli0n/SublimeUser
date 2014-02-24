@@ -1,2 +1,32 @@
 [
+	{ "keys": ["f3"], "command": "find_next" },
+	{ "keys": ["shift+f3"], "command": "find_prev" },
+
+	{ "keys": ["super+ù"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	{ "keys": ["super+;"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+
+	// GoToClass
+	{ "keys": ["f8"], "command": "go_to_file"},
+	// { "keys": ["super+shift+r"], "command": "go_to_function"},
+	// { "keys": ["super+shift+;"], "command": "go_to_data"},
+
+	// Xdebug
+	{"keys": ["shift+f5"], "command": "xdebug" },
+	// {"keys": ["f8"], "command": "xdebug_continue" },
+	{"keys": ["f9"], "command": "xdebug_breakpoint"},
+	{"keys": ["f5"], "command": "xdebug_continue", "args": {"state": "run"}},
+	{"keys": ["f10"], "command": "xdebug_continue", "args": {"state": "step_over"}},
+	{"keys": ["f11"], "command": "xdebug_continue", "args": {"state": "step_into"}},
+	{"keys": ["shift+f11"], "command": "xdebug_continue", "args": {"state": "step_out"}},
+
+	// PHPUnit
+	{"keys": ["f6"], "command": "phpunit_run_tests"},
+	{"keys": ["shift+f6"], "command": "phpunit_run_all_tests"},
+	{"keys": ["super+f6"], "command": "phpunit_test_this_class"},
+	{"keys": ["alt+f6"], "command": "phpunit_open_test_class"},
+	{"keys": ["shift+alt+f6"], "command": "phpunit_open_class_being_tested"},
+	
+	// WinMerge
+	{ "keys": ["super+ctrl+d"],  "command": "win_merge" }
+	{}
 ]

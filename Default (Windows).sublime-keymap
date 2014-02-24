@@ -4,7 +4,6 @@
 	// { "keys": ["ctrl+shift+r"], "command": "go_to_function"},
 	// { "keys": ["ctrl+shift+;"], "command": "go_to_data"},
 
-
 	// Xdebug
 	{"keys": ["shift+f5"], "command": "xdebug" },
 	// {"keys": ["f8"], "command": "xdebug_continue" },

@@ -5,7 +5,6 @@
 	"ignored_packages":
 	[
 		"Vintage",
-		"PHPUnit",
 		"package_control_channel.git"
 	],
 	"remember_open_files": true,
