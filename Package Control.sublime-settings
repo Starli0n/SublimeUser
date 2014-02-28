@@ -12,13 +12,12 @@
 		"rsub",
 		"SideBarEnhancements",
 		"SmartOpener",
-		"User",
 		"Verbose",
 		"WinMerge",
 		"Xdebug"
 	],
 	"repositories":
 	[
-		"https://raw2.github.com/Starli0n/SublimeUser/master/User.json"
- 	]
+		"https://raw.github.com/Starli0n/SublimePackages/master/channel.json"
+	]
 }
