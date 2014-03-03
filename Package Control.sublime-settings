@@ -18,6 +18,6 @@
 	],
 	"repositories":
 	[
-		"https://raw.github.com/Starli0n/SublimePackages/master/channel.json"
+		"https://raw.github.com/Starli0n/SublimePackages/master/package_control.json"
 	]
 }
