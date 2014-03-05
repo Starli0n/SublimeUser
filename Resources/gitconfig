@@ -1,0 +1,19 @@
+git config user.name Starli0n
+git config user.email Starli0n@users.noreply.github.com
+
+git remote add --track master upstream https://github.com/wbond/package_control_channel.git
+
+git fetch upstream
+git merge upstream/master
+git push origin master
+
+git stash
+git stash list
+git stash drop stash@{0}
+
+git rebase -i HEAD~3
+git rebase --abort
+git push --force origin master
+
+git reset --hard HEAD~1
+git push origin HEAD --force

@@ -1,5 +1,19 @@
 [
     {
+        "caption": "Tools",
+        "mnemonic": "T",
+        "id": "tools",
+        "children":
+        [
+            { "command": "compare", "caption": "Compare" },
+            { "command": "open_url", "args": {"url": "https://github.com/Starli0n?tab=repositories"}, "caption": "GitHub" },
+            { "command": "open_url", "args": {"url": "https://www.wunderlist.com/#/lists/lw37aaa57590105d5279bcac19a4a6b6"}, "caption": "Wunderlist" },
+            { "command": "open_url", "args": {"url": "https://c9.io/starli0n"}, "caption": "Cloud 9 IDE" },
+            { "command": "open_url", "args": {"url": "http://starli0n.wikinet.org/wiki/Tools:ST"}, "caption": "WikiNet" },
+            { "command": "open_file", "args": {"file": "${packages}/User/Resources/gitconfig"}, "caption": "Git Config" }
+        ]
+    },
+    {
         "caption": "Preferences",
         "mnemonic": "n",
         "id": "preferences",
@@ -15,6 +29,40 @@
                     { "command": "open_file", "args": {"file": "${packages}/User/Main.sublime-menu"}, "caption": "Main – User" },
                     { "command": "open_file", "args": {"file": "${packages}/User/Side Bar.sublime-menu"}, "caption": "Side Bar – User" },
                     { "command": "open_file", "args": {"file": "${packages}/User/Tab Context.sublime-menu"}, "caption": "Tab Context – User" }
+                ]
+            }
+        ]
+    },
+    {
+        "caption": "Help",
+        "mnemonic": "H",
+        "id": "help",
+        "children":
+        [
+            { "caption": "-" },
+            { "command": "open_url", "args": {"url": "https://www.sublimetext.com/docs/2/api_reference.html"}, "caption": "API Reference" },
+            { "command": "open_url", "args": {"url": "http://sublime-text-unofficial-documentation.readthedocs.org/en/sublime-text-2/index.html"}, "caption": "Unofficial Documentation" },
+            { "command": "open_url", "args": {"url": "https://github.com/SublimeText/Issues"}, "caption": "Bug Tracking" },
+            { "command": "open_url", "args": {"url": "http://www.sublimetext.com/forum"}, "caption": "Forum" },
+            {
+                "caption": "Git",
+                "children":
+                [
+                    { "command": "open_url", "args": {"url": "http://git-scm.com/docs"}, "caption": "Reference" },
+                    { "command": "open_url", "args": {"url": "http://git-scm.com/book"}, "caption": "Book" },
+                    { "command": "open_url", "args": {"url": "https://na1.salesforce.com/help/pdfs/en/salesforce_git_developer_cheatsheet.pdf"}, "caption": "Quick reference" },
+                    { "command": "open_url", "args": {"url": "http://ndpsoftware.com/git-cheatsheet.html"}, "caption": "Workflow" }
+                ]
+            },
+            {
+                "caption": "Packages Control",
+                "children":
+                [
+                    { "command": "open_url", "args": {"url": "https://sublime.wbond.net"}, "caption": "Home" },
+                    { "command": "open_url", "args": {"url": "https://sublime.wbond.net/docs"}, "caption": "Documentation" },
+                    { "caption": "-" },
+                    { "command": "open_file", "args": {"file": "${packages}/Package Control/example-channel.json"}, "caption": "example-channel.json" },
+                    { "command": "open_file", "args": {"file": "${packages}/Package Control/example-repository.json"}, "caption": "example-repository.json" }
                 ]
             }
         ]

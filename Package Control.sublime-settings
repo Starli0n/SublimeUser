@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"FileDiffs",
 		"Git",
 		"GitGutter",
 		"GoToClass",
@@ -18,6 +19,7 @@
 	],
 	"repositories":
 	[
-		"https://raw.github.com/Starli0n/SublimePackages/master/package_control.json"
+		"https://raw.github.com/Starli0n/SublimePackages/master/repository.json",
+		"https://raw.github.com/Starli0n/SublimePackages/master/forked_repository.json"
 	]
 }
