@@ -1,8 +1,9 @@
 {
     "env":
     [
-        { "Ctrl": "C:\\Tools\\SublimeText\\Data\\Packages.ctrl"},
-        { "Git": "C:\\Tools\\SublimeText\\Data\\Packages.git"},
+        { "Packages": "C:\\Tools\\SublimeText\\Data\\Packages\\"},
+        { "Packages.ctrl": "C:\\Tools\\SublimeText\\Data\\Packages.ctrl\\"},
+        { "Packages.git": "C:\\Tools\\SublimeText\\Data\\Packages.git\\"},
         { "Prod"	: "\\\\sudexp\\summit\\SudExp\\client\\ccffo\\" },
         { "Pre"		: "\\\\sudd03\\Summitdev3\\SudPre\\client\\ccffo\\" },
         { "Pre RW"	: "\\\\sudd03\\Summitdev3\\SudPre\\client\\ccfforw\\" },
