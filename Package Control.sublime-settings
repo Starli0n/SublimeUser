@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"AgentRansack",
 		"FileDiffs",
 		"Git",
 		"GitGutter",
