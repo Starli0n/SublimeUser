@@ -1,0 +1,6 @@
+[
+	{ "caption": "-"},
+	{ "caption": "Git Status...", "command": "git_status" },
+	{ "caption": "Git Check this", "command": "git_diff_tool" },
+	{ "caption": "-"}
+]

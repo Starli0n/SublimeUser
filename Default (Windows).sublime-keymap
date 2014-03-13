@@ -1,8 +1,21 @@
 [
+	// FileDiffs
+	{ "keys": ["ctrl+alt+d"],  "command": "file_diff_previous" },
+
+	// Git
+	{ "keys": ["ctrl+shift+g"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git: "} },
+
 	// GoToClass
 	{ "keys": ["f8"], "command": "go_to_class"},
 	// { "keys": ["ctrl+shift+r"], "command": "go_to_function"},
 	// { "keys": ["ctrl+shift+;"], "command": "go_to_data"},
+
+	// PHPUnit
+	{"keys": ["f6"], "command": "phpunit_run_tests"},
+	{"keys": ["shift+f6"], "command": "phpunit_run_all_tests"},
+	{"keys": ["ctrl+f6"], "command": "phpunit_test_this_class"},
+	{"keys": ["alt+f6"], "command": "phpunit_open_test_class"},
+	{"keys": ["shift+alt+f6"], "command": "phpunit_open_class_being_tested"},
 
 	// Xdebug
 	{"keys": ["shift+f5"], "command": "xdebug" },
@@ -12,13 +25,6 @@
 	{"keys": ["f10"], "command": "xdebug_continue", "args": {"state": "step_over"}},
 	{"keys": ["f11"], "command": "xdebug_continue", "args": {"state": "step_into"}},
 	{"keys": ["shift+f11"], "command": "xdebug_continue", "args": {"state": "step_out"}},
-
-	// PHPUnit
-	{"keys": ["f6"], "command": "phpunit_run_tests"},
-	{"keys": ["shift+f6"], "command": "phpunit_run_all_tests"},
-	{"keys": ["ctrl+f6"], "command": "phpunit_test_this_class"},
-	{"keys": ["alt+f6"], "command": "phpunit_open_test_class"},
-	{"keys": ["shift+alt+f6"], "command": "phpunit_open_class_being_tested"},
 
 	{}
 ]

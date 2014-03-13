@@ -25,10 +25,42 @@
                 "children":
                 [
                     { "caption": "-" },
-                    { "command": "open_file", "args": {"file": "${packages}/User/Context.sublime-menu"}, "caption": "Context – User" },
-                    { "command": "open_file", "args": {"file": "${packages}/User/Main.sublime-menu"}, "caption": "Main – User" },
-                    { "command": "open_file", "args": {"file": "${packages}/User/Side Bar.sublime-menu"}, "caption": "Side Bar – User" },
-                    { "command": "open_file", "args": {"file": "${packages}/User/Tab Context.sublime-menu"}, "caption": "Tab Context – User" }
+                    {
+                        "caption": "Context",
+                        "children":
+                        [
+                            { "command": "open_file", "args": {"file": "${packages}/Default/Context.sublime-menu"}, "caption": "Settings – Default" },
+                            { "command": "open_file", "args": {"file": "${packages}/User/Context.sublime-menu"}, "caption": "Settings – User" },
+                            { "caption": "-" }
+                        ]
+                    },
+                    {
+                        "caption": "Main",
+                        "children":
+                        [
+                            { "command": "open_file", "args": {"file": "${packages}/Default/Main.sublime-menu"}, "caption": "Settings – Default" },
+                            { "command": "open_file", "args": {"file": "${packages}/User/Main.sublime-menu"}, "caption": "Settings – User" },
+                            { "caption": "-" }
+                        ]
+                    },
+                    {
+                        "caption": "Side Bar",
+                        "children":
+                        [
+                            { "command": "open_file", "args": {"file": "${packages}/Default/Side Bar.sublime-menu"}, "caption": "Settings – Default" },
+                            { "command": "open_file", "args": {"file": "${packages}/User/Side Bar.sublime-menu"}, "caption": "Settings – User" },
+                            { "caption": "-" }
+                        ]
+                    },
+                    {
+                        "caption": "Tab Context",
+                        "children":
+                        [
+                            { "command": "open_file", "args": {"file": "${packages}/Default/Tab Context.sublime-menu"}, "caption": "Settings – Default" },
+                            { "command": "open_file", "args": {"file": "${packages}/User/Tab Context.sublime-menu"}, "caption": "Settings – User" },
+                            { "caption": "-" }
+                        ]
+                    }
                 ]
             }
         ]
