@@ -2,13 +2,29 @@
 	{ "keys": ["f3"], "command": "find_next" },
 	{ "keys": ["shift+f3"], "command": "find_prev" },
 
-	{ "keys": ["super+ù"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	{ "keys": ["super+Ã¹"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 	{ "keys": ["super+;"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
 
+	// FileDiffs
+	{ "keys": ["ctrl+super+d"],  "command": "file_diff_previous" },
+
+	// Git
+	{ "keys": ["super+shift+g"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git: "} },
+
 	// GoToClass
-	{ "keys": ["f8"], "command": "go_to_file"},
+	{ "keys": ["f8"], "command": "go_to_class"},
 	// { "keys": ["super+shift+r"], "command": "go_to_function"},
 	// { "keys": ["super+shift+;"], "command": "go_to_data"},
+
+	// Package Control
+	{ "keys": ["super+shift+c"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Package Control: "} },
+
+	// PHPUnit
+	{"keys": ["f6"], "command": "phpunit_run_tests"},
+	{"keys": ["shift+f6"], "command": "phpunit_run_all_tests"},
+	{"keys": ["super+f6"], "command": "phpunit_test_this_class"},
+	{"keys": ["alt+f6"], "command": "phpunit_open_test_class"},
+	{"keys": ["shift+alt+f6"], "command": "phpunit_open_class_being_tested"},
 
 	// Xdebug
 	{"keys": ["shift+f5"], "command": "xdebug" },
@@ -19,14 +35,5 @@
 	{"keys": ["f11"], "command": "xdebug_continue", "args": {"state": "step_into"}},
 	{"keys": ["shift+f11"], "command": "xdebug_continue", "args": {"state": "step_out"}},
 
-	// PHPUnit
-	{"keys": ["f6"], "command": "phpunit_run_tests"},
-	{"keys": ["shift+f6"], "command": "phpunit_run_all_tests"},
-	{"keys": ["super+f6"], "command": "phpunit_test_this_class"},
-	{"keys": ["alt+f6"], "command": "phpunit_open_test_class"},
-	{"keys": ["shift+alt+f6"], "command": "phpunit_open_class_being_tested"},
-	
-	// WinMerge
-	{ "keys": ["super+ctrl+d"],  "command": "win_merge" }
 	{}
 ]

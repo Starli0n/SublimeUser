@@ -10,6 +10,9 @@
 	// { "keys": ["ctrl+shift+r"], "command": "go_to_function"},
 	// { "keys": ["ctrl+shift+;"], "command": "go_to_data"},
 
+	// Package Control
+	{ "keys": ["ctrl+shift+c"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Package Control: "} },
+
 	// PHPUnit
 	{"keys": ["f6"], "command": "phpunit_run_tests"},
 	{"keys": ["shift+f6"], "command": "phpunit_run_all_tests"},
