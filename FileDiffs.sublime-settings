@@ -1,4 +1,7 @@
 {
 	"cmd": ["C:\\Tools\\WinMerge\\WinMergeU.exe", "/e", "/ul", "/ur", "$file1", "$file2"],
-	"open_in_sublime": false
+	"open_in_sublime": false,
+	"trim_trailing_white_space_before_diff": true,
+	"expand_full_file_name_in_tab": false,
+	"apply_tempfile_changes_after_diff_tool": true
 }

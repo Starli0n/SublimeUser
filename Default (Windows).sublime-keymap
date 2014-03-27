@@ -1,4 +1,9 @@
 [
+	{ "keys": ["ctrl+."], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+
+	// AgentRansack
+	{ "keys": ["ctrl+alt+f3"],  "command": "agent_ransack" },
+
 	// FileDiffs
 	{ "keys": ["ctrl+alt+d"],  "command": "file_diff_previous" },
 
@@ -8,7 +13,7 @@
 	// GoToClass
 	{ "keys": ["f8"], "command": "go_to_class"},
 	// { "keys": ["ctrl+shift+r"], "command": "go_to_function"},
-	// { "keys": ["ctrl+shift+;"], "command": "go_to_data"},
+	{ "keys": ["ctrl+shift+."], "command": "go_to_data"},
 
 	// Package Control
 	{ "keys": ["ctrl+shift+c"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Package Control: "} },

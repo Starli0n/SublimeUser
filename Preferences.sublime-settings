@@ -1,5 +1,36 @@
 {
 	"color_scheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme",
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.lnk",
+		"*.ico",
+		"*.doc",
+		"*.docx",
+		"*.xls",
+		"*.xlsx"
+	],
+	"folder_exclude_patterns":
+	[
+	],
 	"font_size": 10.0,
 	"hot_exit": true,
 	"ignored_packages":
