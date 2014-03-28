@@ -28,9 +28,6 @@
 		"*.xls",
 		"*.xlsx"
 	],
-	"folder_exclude_patterns":
-	[
-	],
 	"font_size": 10.0,
 	"hot_exit": true,
 	"ignored_packages":
