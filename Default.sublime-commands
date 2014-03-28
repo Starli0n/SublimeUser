@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "Package Control: Open Url",
+        "command": "package_open_url"
+    }
+]
