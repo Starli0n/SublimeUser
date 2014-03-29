@@ -2,11 +2,16 @@
 	"installed_packages":
 	[
 		"AgentRansack",
+		"DocBlockr",
 		"Dos",
+		"Emmet",
+		"Emmet Css Snippets",
 		"FileDiffs",
 		"Git",
 		"GitGutter",
 		"GoToClass",
+		"HTML5",
+		"HTMLAttributes",
 		"Insert Nums",
 		"LiveReload",
 		"Navigation History",
