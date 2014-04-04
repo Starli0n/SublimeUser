@@ -1,0 +1,7 @@
+{
+	// Use diff tool configured in Git config
+	"diff_tool": true
+
+	// Open modified files in a new window
+	,"open_modified_in_new": true
+}
