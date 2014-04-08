@@ -1,5 +1,14 @@
 [
     {
+        "caption": "File",
+        "mnemonic": "F",
+        "id": "file",
+        "children":
+        [
+            { "command": "save_eol", "caption": "Save EOL…" }
+        ]
+    },
+    {
         "caption": "Tools",
         "mnemonic": "T",
         "id": "tools",
