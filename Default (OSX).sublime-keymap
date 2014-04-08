@@ -11,6 +11,10 @@
 	// Git
 	{ "keys": ["super+shift+g"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git: "} },
 
+	// GitGutter
+	{ "keys": ["alt+down"], "command": "git_gutter_next_change" },
+	{ "keys": ["alt+up"], "command": "git_gutter_prev_change" },
+
 	// GoToClass
 	{ "keys": ["f8"], "command": "go_to_class"},
 	// { "keys": ["super+shift+r"], "command": "go_to_function"},
