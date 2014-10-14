@@ -147,6 +147,6 @@ INSTALL
 TIPS
 ----
 
-### Update Project List:
+### Update Project List
 - Open the file `Data/Settings/Session.sublime_session` with another editor
 - Update the list `workspaces > recent_workspaces`
