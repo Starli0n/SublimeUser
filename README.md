@@ -60,6 +60,10 @@ INSTALL
 - Copy `Data/Packages/User/Resources/Windows/subl.bat` To `C:\Tools\System\subl.bat`
 - Add `C:\Tools\System` to `PATH` Environment Variables
 
+### Shortcut for git command in a MS-DOS Console (> g git_commands_params)
+- Copy `Data/Packages/User/Resources/Windows/g.bat` To `C:\Tools\System\g.bat`
+- Add `C:\Tools\System` to `PATH` Environment Variables
+
 ### Configure WinMerge path
 - Configure WinMerge path, edit `Data/Packages/User/FileDiffs.sublime-settings`
 - A WinMerge filter for Sublime Text Package `Data/Packages/User/Resources/Windows/Winmerge/SublimeText.flt`
