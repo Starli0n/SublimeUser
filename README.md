@@ -36,6 +36,11 @@ INSTALL
 ### UTF-8 Support
 - Copy `Packages/User/Resources/exec.py` To `Data/Packages/Default/exec.py`
 
+### Firefox Add-on
+- Open selection in Sublime Text from context menu
+
+https://github.com/Starli0n/FireSublimeText
+
 
 [OSX] INSTALL
 -------------
