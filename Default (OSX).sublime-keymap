@@ -1,6 +1,9 @@
 [
 	{ "keys": ["f3"], "command": "find_next" },
 	{ "keys": ["shift+f3"], "command": "find_prev" },
+	{ "keys": ["super+f3"], "command": "find_under" },
+	{ "keys": ["super+shift+f3"], "command": "find_under_prev" },
+	{ "keys": ["alt+f3"], "command": "find_all_under" },
 
 	{ "keys": ["super+ù"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 	{ "keys": ["super+;"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
