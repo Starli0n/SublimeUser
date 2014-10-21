@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Window Git Diff and Merge Tools
+# Windows Git Diff and Merge Tools
 
 if [ "$#" -eq 2 ] ; then
 	echo Launching WinMergeU.exe "$1" "$2"
