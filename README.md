@@ -73,6 +73,10 @@ https://github.com/Starli0n/FireSublimeText
 - Configure WinMerge path, edit `Data/Packages/User/FileDiffs.sublime-settings`
 - A WinMerge filter for Sublime Text Package `Data/Packages/User/Resources/Windows/Winmerge/SublimeText.flt`
 
+### Configure Diff and Merge tools for Git
+- Copy `Data/Packages/User/Resources/Windows/merge.sh` To `C:\Tools\System\merge.sh`
+- Add `C:\Tools\System` to `PATH` Environment Variables
+
 
 [OSX] DEVELOP PACKAGE
 ---------------------
