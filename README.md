@@ -82,13 +82,12 @@ https://github.com/Starli0n/FireSublimeText
 
 ### Create a system directory
 - Create `C:\Tools\System`
-- Add the path to `PATH` Environment Variables
+- Add the path to `%PATH%` Environment Variables
 
 ### Add Sublime Text to the right click context menu
-- Edit the file `Packages/User/Resources/Windows/SublimeText.reg`
-- Replace `C:\\Tools\\SublimeText\\` by your installation directory (Pay attention t
-o replace `\` by `\\`)
-- Save and execute `SublimeText.reg`
+- Edit the file `Packages/User/Resources/Windows/Tools/SublimeTextRightClickContextMenu.reg`
+- Replace `C:\\Tools\\SublimeText\\` by your installation directory (Pay attention to replace `\` by `\\`)
+- Save and execute `SublimeTextRightClickContextMenu.reg`
 
 ### Execute batch file (*.bat or *.cmd) in Sublime Text (Ctrl+B)
 - Copy `Packages/User/Resources/Windows/$InstallDir/Sublime.bat` To `Sublime.bat`
@@ -96,23 +95,22 @@ o replace `\` by `\\`)
 - Replace `C:\\Tools\\SublimeText\\` by your installation directory (Pay attention to replace `\` by `\\`)
 
 ### Call Sublime Text from a MS-DOS Console (> subl file_name)
-- Copy `Packages/User/Resources/Windows/subl.bat` To `C:\Tools\System\subl.bat`
+- Copy `Packages/User/Resources/Windows/$SYSTEM/subl.bat` To `C:\Tools\System\subl.bat`
 
 ### Shortcut for git command in a MS-DOS Console (> g git_commands_params)
-- Copy `Packages/User/Resources/Windows/g.bat` To `C:\Tools\System\g.bat`
+- Copy `Packages/User/Resources/Windows/$SYSTEM/g.bat` To `C:\Tools\System\g.bat`
 
 ### Configure FileDiff command
 - Edit `Packages/User/FileDiffs.sublime-settings`
 - Configure WinMerge path
-- A WinMerge filter for Sublime Text Package `Packages/User/Resources/Windows/Winmerge/SublimeText.flt`
+- A WinMerge filter for Sublime Text Package `Packages/User/Resources/Windows/Tools/SublimeTextWinmergeFilter.flt`
 
 ### Configure Diff and Merge tools for Git
-- Copy `Packages/User/Resources/Windows/merge.sh` To `C:\Tools\System\merge.sh`
+- Copy `Packages/User/Resources/Windows/$SYSTEM/merge.sh` To `C:\Tools\System\merge.sh`
 
-### Copy Path to Clipboard
-- Install `Packages/User/Resources/Windows/`
-- Add icon
-- TODO
+### Add `Copy Path to Clipboard` feature to the right click context menu
+- Install `Packages/User/Resources/Windows/Tools/ClipboardPath_Setup.exe`
+- Add an icon `Packages/User/Resources/Windows/Tools/ClipboardPath_Setup.exe.reg`
 
 
 XDEBUG
@@ -131,7 +129,7 @@ XDEBUG
 [WIN] PACKAGE DEVELOPMENT
 -------------------------
 
-- Unzip `Packages/User/Resources/Windows/Junction.zip` To `C:\Tools\System\junction.exe`
+- Unzip `Packages/User/Resources/Windows/Tools/Junction.zip` To `C:\Tools\System\junction.exe`
 - Copy `Data/Packages/User/Resources/Windows/$InstallDir/Data/*` To `Data/*`
 - Close Sublime Text
 - Rename `Packages` To `Packages.ctrl`
@@ -198,6 +196,9 @@ XDEBUG
 
 ### Switch to Dev mode `Packages.git`
 - Run the shortcut `sublime_text_pkg.git.bat`
+
+### Fetch all Git package
+- Run `Packages/User/Resources/Windows/PackageFetch.bat`
 
 
 TIPS
