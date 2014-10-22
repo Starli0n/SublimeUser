@@ -116,7 +116,26 @@ https://github.com/Starli0n/FireSublimeText
 XDEBUG
 ------
 
-### TODO
+### Install Firefox Add-on
+- easy Xdebug
+	- https://addons.mozilla.org/en-US/firefox/addon/easy-xdebug-with-moveable-
+	- Change `Value of the debug cookie` to `sublime.xdebug`
+- LiveReload
+	- http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi
+
+### Apache
+- Restart service with `XDEBUG_SESSION=sublime.xdebug`
+- Check the value on phpinfo()
+
+### Run a XDebug session
+- Firefox
+	- Open the PHP file to debug
+	- Activate LiveReload on this file
+- Sublime Text
+	- Add some breakpoints on the code (F9)
+	- `Start debugging` (Shift+F5)
+	- Save the file to debug to activate the live reloading
+- if the debug session does not work, restart Apache, Firefox and Sublime Text
 
 
 [OSX] PACKAGE DEVELOPMENT
