@@ -48,6 +48,9 @@ https://github.com/Starli0n/FireSublimeText
 [OSX] INSTALL
 -------------
 
+### Create an alias `subl`
+`ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
+
 ### Customize Finder toolbar to open file in Sublime Text
 - TODO
 
@@ -75,6 +78,10 @@ https://github.com/Starli0n/FireSublimeText
 
 ### Show hidden files with a widget
 - Copy `Packages/User/Resources/OSX/$HOME/Library/Widgets/HiddenFiles.wdgt` to `~/Library/Widgets/HiddenFiles.wdgt`
+
+### Change keyboard layout
+- Copy `Packages/User/Resources/OSX/$HOME/Library/Keyboard Layouts/*` to `~/Library/Keyboard Layouts/*`
+- System Preferences > Laguage & Text > Input Sources > French X-Coding
 
 
 [WIN] INSTALL
@@ -116,6 +123,33 @@ https://github.com/Starli0n/FireSublimeText
 XDEBUG
 ------
 
+### [OSX] Install XDebug (or use a package with preinstalled XDebug like XAMP or MAMP)
+- Dowload pre-compiled PHP extension from ActiveState for Mac OS X
+	- http://aspn.activestate.com/ASPN/Downloads/Komodo/RemoteDebugging
+- Unarchive the downloaded file
+- Enter the appropriated directory and find the file named "xdebug.so"
+- In Finder, press Cmd+Shift+G and paste this directory
+	- `/usr/lib/php/extensions/no-debug-non-zts-20090626/`
+- Drag & Drop "xdebug.so" file to this directory
+- Open php.ini normaly there `/private/etc/php.ini`
+- Append the following lines to the bottom of the file
+````
+[xdebug]
+zend_extension=/usr/lib/php/extensions/no-debug-non-zts-20090626/xdebug.so
+xdebug.idekey=sublime.xdebug
+xdebug.remote_enable=1
+xdebug.show_local_vars=1
+xdebug.remote_log=/tmp/xdebug.log
+````
+- Tweak configuration setting
+	- http://xdebug.org/docs/all_settings
+- Restart the Apache web server from a terminal
+````
+> export XDEBUG_SESSION=sublime.xdebug
+> sudo /usr/sbin/apachectl restart
+````
+- Test the installation by searching for "XDebug" on a phpinfo() page
+
 ### Install Firefox Add-on
 - easy Xdebug
 	- https://addons.mozilla.org/en-US/firefox/addon/easy-xdebug-with-moveable-
@@ -125,12 +159,13 @@ XDEBUG
 
 ### Apache
 - Restart service with `XDEBUG_SESSION=sublime.xdebug`
-- Check the value on phpinfo()
+- Check the value on phpinfo() page
 
 ### Run a XDebug session
 - Firefox
 	- Open the PHP file to debug
 	- Activate LiveReload on this file
+	- Toggle xdebug cookie (red->active)
 - Sublime Text
 	- Add some breakpoints on the code (F9)
 	- `Start debugging` (Shift+F5)
