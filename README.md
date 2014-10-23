@@ -37,7 +37,7 @@ INSTALL
 ```
 
 ### UTF-8 Support
-- Copy `Packages/User/Resources/exec.py` To `Packages/Default/exec.py`
+- Copy `Packages/User/Resources/Any/Default/exec.py` To `Packages/Default/exec.py`
 
 ### Firefox Add-on
 - Open selection in Sublime Text from context menu
@@ -100,12 +100,13 @@ https://github.com/Starli0n/FireSublimeText
 - Copy `Packages/User/Resources/Windows/$InstallDir/Sublime.bat` To `Sublime.bat`
 - Edit `Packages/User/Batch File.sublime-build`
 - Replace `C:\\Tools\\SublimeText\\` by your installation directory (Pay attention to replace `\` by `\\`)
+- Copy `Packages/User/Resources/Windows/bin/timer.exe` To `C:\Tools\System\timer.exe`
 
 ### Call Sublime Text from a MS-DOS Console (> subl file_name)
-- Copy `Packages/User/Resources/Windows/$SYSTEM/subl.bat` To `C:\Tools\System\subl.bat`
+- Copy `Packages/User/Resources/Windows/bin/subl.bat` To `C:\Tools\System\subl.bat`
 
 ### Shortcut for git command in a MS-DOS Console (> g git_commands_params)
-- Copy `Packages/User/Resources/Windows/$SYSTEM/g.bat` To `C:\Tools\System\g.bat`
+- Copy `Packages/User/Resources/Windows/bin/g.bat` To `C:\Tools\System\g.bat`
 
 ### Configure FileDiff command
 - Edit `Packages/User/FileDiffs.sublime-settings`
@@ -113,11 +114,18 @@ https://github.com/Starli0n/FireSublimeText
 - A WinMerge filter for Sublime Text Package `Packages/User/Resources/Windows/Tools/SublimeTextWinmergeFilter.flt`
 
 ### Configure Diff and Merge tools for Git
-- Copy `Packages/User/Resources/Windows/$SYSTEM/merge.sh` To `C:\Tools\System\merge.sh`
+- Copy `Packages/User/Resources/Windows/bin/gitools.sh` To `C:\Tools\System\gitools.sh`
 
 ### Add `Copy Path to Clipboard` feature to the right click context menu
 - Install `Packages/User/Resources/Windows/Tools/ClipboardPath_Setup.exe`
 - Add an icon `Packages/User/Resources/Windows/Tools/ClipboardPath_Setup.exe.reg`
+
+### Add syntax highlighting for Git Config (Require Python)
+- Copy `Packages/User/Resources/Any/bin/colorama` To `C:\Tools\System\colorama`
+- Copy `Packages/User/Resources/Any/bin/colorcfg.py` To `C:\Tools\System\colorcfg.py`
+````
+> git c
+````
 
 
 XDEBUG
@@ -183,7 +191,7 @@ xdebug.remote_log=/tmp/xdebug.log
 [WIN] PACKAGE DEVELOPMENT
 -------------------------
 
-- Unzip `Packages/User/Resources/Windows/Tools/Junction.zip` To `C:\Tools\System\junction.exe`
+- Copy `Packages/User/Resources/Windows/Tools/Junction.exe` To `C:\Tools\System\junction.exe`
 - Copy `Data/Packages/User/Resources/Windows/$InstallDir/Data/*` To `Data/*`
 - Close Sublime Text
 - Rename `Packages` To `Packages.ctrl`
