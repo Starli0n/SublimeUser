@@ -1,5 +1,5 @@
 {
-    "cmd": ["C:\\Tools\\SublimeText\\Sublime.bat", "$file"],
+    "cmd": ["SublimeBuild.bat", "$file"],
     "selector": "source.dosbatch",
     "variants": [
 	    { "cmd": ["$file"],

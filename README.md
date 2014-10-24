@@ -90,6 +90,8 @@ https://github.com/Starli0n/FireSublimeText
 ### Create a system directory
 - Create `C:\Tools\System`
 - Add the path to `%PATH%` Environment Variables
+- Add this path too
+	- `C:\Tools\SublimeText\Data\Packages\User\Resources\Windows\bin`
 
 ### Add Sublime Text to the right click context menu
 - Edit the file `Packages/User/Resources/Windows/Tools/SublimeTextRightClickContextMenu.reg`

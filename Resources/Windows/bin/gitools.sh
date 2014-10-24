@@ -4,31 +4,46 @@
 
 BASEDIR=$(dirname $0)
 
+if [ "$#" -eq 0 ] ; then
+	exit
+
+# Shell Git
+elif [ "$1" = "shell" ] ; then
+	$2 $3 $4 $5 $6 $7 $8 $9
+
 # Print global Git config
-if [ "$#" -eq 1 ] ; then
-	which python > /dev/null 2>&1
-	if [ "$?" -eq 0 ] && [ -f "${BASEDIR}/colorcfg.py" ]; then
-		if [ ! -f "${BASEDIR}/colorcfg.pyc" ]; then
-			python -m py_compile "${BASEDIR}/colorcfg.py"
-		fi
-		python "${BASEDIR}/colorcfg.pyc" "${HOMEDRIVE}${HOMEPATH}.gitconfig"
+elif [ "$1" = "config" ] && [ "$#" -eq 2 ] ; then
+	PYBIN=`which python`
+	error=0
+	if [ -z "$PYBIN" ]; then
+		error=1
 	else
+		ANYBIN=${BASEDIR}/../../Any/bin
+		if [ ! -f "${ANYBIN}/colorcfg.pyc" ]; then
+			"$PYBIN" -m py_compile "${ANYBIN}/colorcfg.py"
+		fi
+		"$PYBIN" "${ANYBIN}/colorcfg.pyc" "${HOMEDRIVE}${HOMEPATH}.gitconfig"
+		error=$?
+	fi
+
+	if [ "$error" -ne 0 ]; then
 		cat "${HOMEDRIVE}${HOMEPATH}.gitconfig"
+		echo Error=$error
 	fi
 
 # Diff Tool
-elif [ "$#" -eq 2 ] ; then
+elif [ "$1" = "difftool" ] && [ "$#" -eq 3 ] ; then
 	echo Launching WinMergeU.exe
-	echo FileL : $1
-	echo FileR : $2
-	"C:\Program Files (x86)\WinMerge\WinMergeU.exe" -e -ub -dl "Base" -dr "Mine" "$1" "$2"
+	echo FileL : $2
+	echo FileR : $3
+	"C:\Program Files (x86)\WinMerge\WinMergeU.exe" -e -ub -dl "Base" -dr "Mine" "$2" "$3"
 
 # Merge Tool
-elif [ "$#" -eq 4 ] ; then
+elif [ "$1" = "mergetool" ] && [ "$#" -eq 5 ] ; then
 	echo Launching BCompare.exe
-	echo LOCAL_ : $1
-	echo REMOTE : $2
-	echo BASE__ : $3
-	echo MERGED : $4
-	BCompare.exe "$1" "$2" "$3" "$4"
+	echo LOCAL_ : $2
+	echo REMOTE : $3
+	echo BASE__ : $4
+	echo MERGED : $5
+	BCompare.exe "$2" "$3" "$4" "$5"
 fi

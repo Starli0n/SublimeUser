@@ -33,7 +33,7 @@ goto :eof
 
 :main
 rem Current = Data/Packages
-cd ../../..
+cd ../../../..
 echo CD=%cd%
 echo.
 call :git_batch AgentRansack
