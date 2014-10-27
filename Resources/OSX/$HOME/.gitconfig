@@ -1,0 +1,85 @@
+[user]
+	name = Starli0n
+	email = Starli0n@users.noreply.com
+[core]
+	editor = subl -w
+[http]
+	sslverify = true
+	sslCAinfo = /usr/local/share/ca-bundle.crt
+[color]
+	ui = true
+[diff]
+	tool = merge
+[difftool]
+	prompt = false
+[difftool "merge"]
+	cmd = ~/.MacOSX/gitools.sh difftool \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = merge
+[mergetool]
+	prompt = false
+[mergetool "merge"]
+	trustExitCode = true
+	cmd = ~/.MacOSX/gitools.sh mergetool \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+[alias]
+	h = help
+	cfg = config -e # Edit local config
+	gcfg = config --global -e # Edit global config
+	s = "!gitools.sh shell" # Use git shell [@PARAMS]
+	la = "!git config --get-regexp alias | cut -c 7-"
+	up = remote add upstream # Add forked repo with all branches @URL
+	upm = remote add --track master upstream # Add forked repo @URL
+	ll = log --pretty=oneline --abbrev-commit --graph --decorate --all # Smart log
+	llx = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 # Show the commit of the @SHA
+	llh = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 HEAD
+	llm = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 master
+	llo = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 origin/master
+	llu = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 upstream/master
+	last = log -1 HEAD # Last log
+	get = rev-parse --short # Get short @SHA (ex: git get HEAD~1)
+	f = "!git ls-files | grep -i" # Find path of @filename
+	unstage = reset HEAD -- # Stage (green) to Modified (red) status @filename
+	us = reset HEAD --
+	discard = checkout -- # Modified (red) to Unmodified (-) status @filename
+	dd = checkout --
+	a = add # Modified (red) to Stage (green) status @filename [@filenamebis]
+	undo = reset --soft HEAD~
+	redo = reset --soft ORIG_HEAD
+	pop = reset --mixed HEAD~
+	hpop = reset --hard HEAD~
+	hreset = reset --hard
+	hresetom = reset --hard origin/master
+	fix = rebase -i HEAD~2 # Rebase the two last commits
+	st = status
+	co = checkout
+	com = checkout master
+	cob = checkout -b # New @FEATURE_NAME (or git checkout -b slave origin/slave)
+	coh = checkout HEAD --
+	br = branch
+	brd = branch -d # Delete @BRANCH_NAME
+	bra = branch -a # Show all branches
+	rt = remote # Show remote branches
+	ci = commit
+	cim = commit -m # Commit with a command line message "@Message"
+	ciam = commit -am # Commit and add with a command line message "@Message"
+	cia = commit --amend # Amend last commit
+	sh = stash # Backup current modifications
+	shl = stash list # List saved modifications
+	shp = stash pop # Pop last modification
+	ft = fetch
+	ftu = fetch upstream master
+	fta = fetch --all
+	rb = rebase
+	mg = merge
+	mgu = merge upstream/master
+	pom = push origin master # Push local commits to remote repository
+	pomf = push origin master --force # Force push
+	pom1 = push origin HEAD~1:master # Push commit except the last one
+	dt = difftool # (1) Diff between Staged and Modified or (2) [@OLDER_SHA @NEWER_SHA]
+	dtc = difftool --cached # Diff between Repo and Staged
+	dtl = difftool HEAD~1 HEAD # Diff between the two last commits
+	dtll = difftool --name-only # List of filename diff between @OLDER_SHA @NEWER_SHA
+	dtlll = difftool --name-only HEAD~1 HEAD # List of filename diff between the two last commits
+	cleanu = clean -f -d # Delete untracked files and directory
+	cleani = clean -f -d -X # Delete ignored files and directory
+	cleanall = clean -f -d -x # Delete untracked and ignored files and directory

@@ -49,14 +49,19 @@ https://github.com/Starli0n/FireSublimeText
 -------------
 
 ### Create an alias `subl`
-`ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
+`ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+
+### Create an alias `.gitconfig`
+- `ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.gitconfig" "$HOME/.gitconfig"`
+
+### Create an alias `.bash_profile`
+- `ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.bash_profile" "$HOME/.bash_profile"`
+
+### Create an alias `.MacOSX`
+- `ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.MacOSX" "$HOME/.MacOSX"`
 
 ### Customize Finder toolbar to open file in Sublime Text
 - TODO
-
-### Customize bash profile to open file from a terminal (> subl file_name)
-- Copy `Packages/User/Resources/OSX/$HOME/.bash_profile` To `~/.bash_profile`
-- Update `~/.bashrc` by `Packages/User/Resources/OSX/$HOME/.bashrc`
 
 ### Configure FileDiff command
 - Edit `Packages/User/FileDiffs.sublime-settings`
@@ -65,12 +70,6 @@ https://github.com/Starli0n/FireSublimeText
 ### Change font size
 - Edit `Packages/User/Preferences.sublime-settings`
 - Replace by `"font_size": 15.0`
-
-### Configure Diff and Merge tools for Git
-- Copy `Packages/User/Resources/OSX/$HOME/merge.sh` To `~/merge.sh`
-
-### Add Git to PATH environment variable
-- Copy `Packages/User/Resources/OSX/$HOME/.MacOSX` To `~/.MacOSX`
 
 ### Copy Path to Clipboard
 - Copy `Packages/User/Resources/OSX/$HOME/Library/Services/Copy Path to Clipboard.workflow` to `~/Library/Services/Copy Path to Clipboard.workflow`
@@ -87,47 +86,27 @@ https://github.com/Starli0n/FireSublimeText
 [WIN] INSTALL
 -------------
 
-### Create a system directory
-- Create `C:\Tools\System`
-- Add the path to `%PATH%` Environment Variables
-- Add this path too
+### Usefull binaries
+- Include this path to `%PATH%` Environment Variable
 	- `C:\Tools\SublimeText\Data\Packages\User\Resources\Windows\bin`
+- Execute batch files (*.bat or *.cmd) or python scripts (*.py) in Sublime Text (Ctrl+B)
+- Call Sublime Text from a MS-DOS Console (> subl file_name)
+- Shortcut for git command in a MS-DOS Console (> g git_commands_params)
+- Add syntax highlighting for Git global config (Require Python) (> git g)
 
 ### Add Sublime Text to the right click context menu
 - Edit the file `Packages/User/Resources/Windows/Tools/SublimeTextRightClickContextMenu.reg`
 - Replace `C:\\Tools\\SublimeText\\` by your installation directory (Pay attention to replace `\` by `\\`)
 - Save and execute `SublimeTextRightClickContextMenu.reg`
 
-### Execute batch file (*.bat or *.cmd) in Sublime Text (Ctrl+B)
-- Copy `Packages/User/Resources/Windows/$InstallDir/Sublime.bat` To `Sublime.bat`
-- Edit `Packages/User/Batch File.sublime-build`
-- Replace `C:\\Tools\\SublimeText\\` by your installation directory (Pay attention to replace `\` by `\\`)
-- Copy `Packages/User/Resources/Windows/bin/timer.exe` To `C:\Tools\System\timer.exe`
-
-### Call Sublime Text from a MS-DOS Console (> subl file_name)
-- Copy `Packages/User/Resources/Windows/bin/subl.bat` To `C:\Tools\System\subl.bat`
-
-### Shortcut for git command in a MS-DOS Console (> g git_commands_params)
-- Copy `Packages/User/Resources/Windows/bin/g.bat` To `C:\Tools\System\g.bat`
-
 ### Configure FileDiff command
 - Edit `Packages/User/FileDiffs.sublime-settings`
 - Configure WinMerge path
 - A WinMerge filter for Sublime Text Package `Packages/User/Resources/Windows/Tools/SublimeTextWinmergeFilter.flt`
 
-### Configure Diff and Merge tools for Git
-- Copy `Packages/User/Resources/Windows/bin/gitools.sh` To `C:\Tools\System\gitools.sh`
-
 ### Add `Copy Path to Clipboard` feature to the right click context menu
 - Install `Packages/User/Resources/Windows/Tools/ClipboardPath_Setup.exe`
 - Add an icon `Packages/User/Resources/Windows/Tools/ClipboardPath_Setup.exe.reg`
-
-### Add syntax highlighting for Git Config (Require Python)
-- Copy `Packages/User/Resources/Any/bin/colorama` To `C:\Tools\System\colorama`
-- Copy `Packages/User/Resources/Any/bin/colorcfg.py` To `C:\Tools\System\colorcfg.py`
-````
-> git c
-````
 
 
 XDEBUG
@@ -193,7 +172,8 @@ xdebug.remote_log=/tmp/xdebug.log
 [WIN] PACKAGE DEVELOPMENT
 -------------------------
 
-- Copy `Packages/User/Resources/Windows/Tools/Junction.exe` To `C:\Tools\System\junction.exe`
+- Copy `Packages/User/Resources/Windows/bin/Junction.exe` To `C:\Tools\System\junction.exe`
+- Include the path `C:\Tools\System` to `%PATH%` Environment Variable
 - Copy `Data/Packages/User/Resources/Windows/$InstallDir/Data/*` To `Data/*`
 - Close Sublime Text
 - Rename `Packages` To `Packages.ctrl`
