@@ -2,27 +2,25 @@
 	name = Starli0n
 	email = Starli0n@users.noreply.com
 [core]
-	editor = subl -w
+	editor = 'C:\\Tools\\SublimeText\\sublime_text.exe' -w
+	askpass = git-gui--askpass
 	#pager = cat # Prevent keypress from log command or use git --no-pager
 [http]
-	sslverify = true
+	sslverify = false
 	#proxy = "http://user:pass@proxy.com:port"
-	sslCAinfo = /usr/local/share/ca-bundle.crt
-[color]
-	ui = true
 [diff]
 	tool = gitools
 [difftool]
 	prompt = false
 [difftool "gitools"]
-	cmd = ~/.MacOSX/gitools.sh difftool \"$LOCAL\" \"$REMOTE\"
+	cmd = gitools.sh difftool \"$LOCAL\" \"$REMOTE\"
 [merge]
 	tool = gitools
 [mergetool]
 	prompt = false
 [mergetool "gitools"]
 	trustExitCode = true
-	cmd = ~/.MacOSX/gitools.sh mergetool \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	cmd = gitools.sh mergetool \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 [alias]
 	h = help
 	g = "!gitools.sh config .gitconfig" # Show me

@@ -33,10 +33,14 @@ elif [ "$1" = "config" ] && [ "$#" -eq 2 ] ; then
 
 # Diff Tool
 elif [ "$1" = "difftool" ] && [ "$#" -eq 3 ] ; then
-	echo Launching WinMergeU.exe
-	echo FileL : $2
-	echo FileR : $3
-	"C:\Program Files (x86)\WinMerge\WinMergeU.exe" -e -ub -dl "Base" -dr "Mine" "$2" "$3"
+	if [ "$2" = "/dev/null" ] ; then
+		echo FileN : $3
+	else
+		echo Launching WinMergeU.exe
+		echo FileL : $2
+		echo FileR : $3
+		"C:\Program Files (x86)\WinMerge\WinMergeU.exe" -e -ub -dl "Base" -dr "Mine" "$2" "$3"
+	fi
 
 # Merge Tool
 elif [ "$1" = "mergetool" ] && [ "$#" -eq 5 ] ; then

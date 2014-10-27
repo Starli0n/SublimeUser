@@ -48,17 +48,13 @@ https://github.com/Starli0n/FireSublimeText
 [OSX] INSTALL
 -------------
 
-### Create an alias `subl`
-`ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-
-### Create an alias `.gitconfig`
-- `ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.gitconfig" "$HOME/.gitconfig"`
-
-### Create an alias `.bash_profile`
-- `ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.bash_profile" "$HOME/.bash_profile"`
-
-### Create an alias `.MacOSX`
-- `ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.MacOSX" "$HOME/.MacOSX"`
+### Create some alias
+````
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.gitconfig" "$HOME/.gitconfig"
+ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.bash_profile" "$HOME/.bash_profile"
+ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.MacOSX" "$HOME/.MacOSX"
+````
 
 ### Customize Finder toolbar to open file in Sublime Text
 - TODO
@@ -93,6 +89,9 @@ https://github.com/Starli0n/FireSublimeText
 - Call Sublime Text from a MS-DOS Console (> subl file_name)
 - Shortcut for git command in a MS-DOS Console (> g git_commands_params)
 - Add syntax highlighting for Git global config (Require Python) (> git g)
+
+### Create an alias `.gitconfig`
+`mklink  %HOMEDRIVE%%HOMEPATH%.gitconfig C:\Tools\SublimeText\Data\Packages\User\Resources\Windows\$HOME\.gitconfig`
 
 ### Add Sublime Text to the right click context menu
 - Edit the file `Packages/User/Resources/Windows/Tools/SublimeTextRightClickContextMenu.reg`
