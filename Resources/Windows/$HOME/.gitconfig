@@ -81,6 +81,7 @@
 	dtl = difftool HEAD~1 HEAD # Diff between the two last commits
 	dtll = difftool --name-only # List of filename diff between @OLDER_SHA @NEWER_SHA
 	dtlll = difftool --name-only HEAD~1 HEAD # List of filename diff between the two last commits
+	mt = mergetool # File to merge @filename
 	cleanu = clean -f -d # Delete untracked files and directory
 	cleani = clean -f -d -X # Delete ignored files and directory
 	cleanall = clean -f -d -x # Delete untracked and ignored files and directory
