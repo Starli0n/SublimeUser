@@ -28,32 +28,32 @@ class UserInstallCommand(sublime_plugin.TextCommand):
 			dst = '/usr/local/bin/subl'
 			self.alias(src, dst)
 
-			src = os.path.join(user_dir, 'Resources/OSX/$HOME/.gitconfig')
+			src = os.path.join(user_dir, 'Resources/OSX/HOME/.gitconfig')
 			dst = os.path.expandvars('$HOME/.gitconfig')
 			self.alias(src, dst)
 
-			src = os.path.join(user_dir, 'Resources/OSX/$HOME/.bash_profile')
+			src = os.path.join(user_dir, 'Resources/OSX/HOME/.bash_profile')
 			dst = os.path.expandvars('$HOME/.bash_profile')
 			self.alias(src, dst)
 
-			src = os.path.join(user_dir, 'Resources/OSX/$HOME/.MacOSX')
+			src = os.path.join(user_dir, 'Resources/OSX/HOME/.MacOSX')
 			dst = os.path.expandvars('$HOME/.MacOSX')
 			self.alias(src, dst)
 
 			# Files to copy
-			src = os.path.join(user_dir, 'Resources/OSX/$HOME/Library/Services/Copy Path to Clipboard.workflow')
+			src = os.path.join(user_dir, 'Resources/OSX/HOME/Library/Services/Copy Path to Clipboard.workflow')
 			dst = os.path.expandvars('$HOME/Library/Services/Copy Path to Clipboard.workflow')
 			self.copy_dir(src, dst)
 
-			src = os.path.join(user_dir, 'Resources/OSX/$HOME/Library/Widgets/HiddenFiles.wdgt')
+			src = os.path.join(user_dir, 'Resources/OSX/HOME/Library/Widgets/HiddenFiles.wdgt')
 			dst = os.path.expandvars('$HOME/Library/Widgets/HiddenFiles.wdgt')
 			self.copy_dir(src, dst)
 
-			src = os.path.join(user_dir, 'Resources/OSX/$HOME/Library/Keyboard Layouts/French X-Coding.keylayout')
+			src = os.path.join(user_dir, 'Resources/OSX/HOME/Library/Keyboard Layouts/French X-Coding.keylayout')
 			dst = os.path.expandvars('$HOME/Library/Keyboard Layouts/French X-Coding.keylayout')
 			self.copy_file(src, dst)
 
-			src = os.path.join(user_dir, 'Resources/OSX/$HOME/Library/Keyboard Layouts/French X-Coding.icns')
+			src = os.path.join(user_dir, 'Resources/OSX/HOME/Library/Keyboard Layouts/French X-Coding.icns')
 			dst = os.path.expandvars('$HOME/Library/Keyboard Layouts/French X-Coding.icns')
 			self.copy_file(src, dst)
 

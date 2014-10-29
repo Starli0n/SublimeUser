@@ -36,6 +36,9 @@ INSTALL
 > git remote add upstream https://github.com/Starli0n/SublimeUser.git
 ```
 
+### Self-Installer
+`Super+Shift+P User: Install`
+
 ### UTF-8 Support
 - Copy `Packages/User/Resources/Any/Default/exec.py` To `Packages/Default/exec.py`
 
@@ -51,9 +54,9 @@ https://github.com/Starli0n/FireSublimeText
 ### Create some alias
 ````
 ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.gitconfig" "$HOME/.gitconfig"
-ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.bash_profile" "$HOME/.bash_profile"
-ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/\$HOME/.MacOSX" "$HOME/.MacOSX"
+ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.gitconfig" "$HOME/.gitconfig"
+ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.bash_profile" "$HOME/.bash_profile"
+ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.MacOSX" "$HOME/.MacOSX"
 ````
 
 ### Customize Finder toolbar to open file in Sublime Text
@@ -68,14 +71,14 @@ ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/
 - Replace by `"font_size": 15.0`
 
 ### Copy Path to Clipboard
-- Copy `Packages/User/Resources/OSX/$HOME/Library/Services/Copy Path to Clipboard.workflow` to `~/Library/Services/Copy Path to Clipboard.workflow`
-- Add a shorcut `Shift+Super+C` (System Preferences > Keyboard > Application Shortcuts)
+- Copy `Packages/User/Resources/OSX/HOME/Library/Services/Copy Path to Clipboard.workflow` to `~/Library/Services/Copy Path to Clipboard.workflow`
+- Add a shorcut `Super+Shift+C` (System Preferences > Keyboard > Application Shortcuts)
 
 ### Show hidden files with a widget
-- Copy `Packages/User/Resources/OSX/$HOME/Library/Widgets/HiddenFiles.wdgt` to `~/Library/Widgets/HiddenFiles.wdgt`
+- Copy `Packages/User/Resources/OSX/HOME/Library/Widgets/HiddenFiles.wdgt` to `~/Library/Widgets/HiddenFiles.wdgt`
 
 ### Change keyboard layout
-- Copy `Packages/User/Resources/OSX/$HOME/Library/Keyboard Layouts/*` to `~/Library/Keyboard Layouts/*`
+- Copy `Packages/User/Resources/OSX/HOME/Library/Keyboard Layouts/*` to `~/Library/Keyboard Layouts/*`
 - System Preferences > Laguage & Text > Input Sources > French X-Coding
 
 
@@ -91,7 +94,7 @@ ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/
 - Add syntax highlighting for Git global config (Require Python) (> git g)
 
 ### Create an alias `.gitconfig`
-`mklink  %HOMEDRIVE%%HOMEPATH%.gitconfig C:\Tools\SublimeText\Data\Packages\User\Resources\Windows\$HOME\.gitconfig`
+`mklink  %HOMEDRIVE%%HOMEPATH%.gitconfig C:\Tools\SublimeText\Data\Packages\User\Resources\Windows\HOME\.gitconfig`
 
 ### Add Sublime Text to the right click context menu
 - Edit the file `Packages/User/Resources/Windows/Tools/SublimeTextRightClickContextMenu.reg`
@@ -116,7 +119,7 @@ XDEBUG
 	- http://aspn.activestate.com/ASPN/Downloads/Komodo/RemoteDebugging
 - Unarchive the downloaded file
 - Enter the appropriated directory and find the file named "xdebug.so"
-- In Finder, press Cmd+Shift+G and paste this directory
+- In Finder, press Super+Shift+G and paste this directory
 	- `/usr/lib/php/extensions/no-debug-non-zts-20090626/`
 - Drag & Drop "xdebug.so" file to this directory
 - Open php.ini normaly there `/private/etc/php.ini`
@@ -173,7 +176,7 @@ xdebug.remote_log=/tmp/xdebug.log
 
 - Copy `Packages/User/Resources/Windows/bin/Junction.exe` To `C:\Tools\System\junction.exe`
 - Include the path `C:\Tools\System` to `%PATH%` Environment Variable
-- Copy `Data/Packages/User/Resources/Windows/$InstallDir/Data/*` To `Data/*`
+- Copy `Data/Packages/User/Resources/Windows/InstallDir/Data/*` To `Data/*`
 - Close Sublime Text
 - Rename `Packages` To `Packages.ctrl`
 - Copy `Packages.ctrl` To `Packages.git`
