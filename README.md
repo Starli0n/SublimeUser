@@ -164,19 +164,10 @@ xdebug.remote_log=/tmp/xdebug.log
 - if the debug session does not work, restart Apache, Firefox and Sublime Text
 
 
-[OSX] PACKAGE DEVELOPMENT
--------------------------
+PACKAGE DEVELOPMENT
+-------------------
 
-### TODO
-- Copy `Packages/User/Resources/OSX/Library/Services/• Sublime Packages.workflow` to `~/Library/Services/• Sublime Packages.workflow`
-
-
-[WIN] PACKAGE DEVELOPMENT
--------------------------
-
-- Copy `Packages/User/Resources/Windows/bin/Junction.exe` To `C:\Tools\System\junction.exe`
-- Include the path `C:\Tools\System` to `%PATH%` Environment Variable
-- Copy `Data/Packages/User/Resources/Windows/InstallDir/Data/*` To `Data/*`
+### Create a Release and a Development environment
 - Close Sublime Text
 - Rename `Packages` To `Packages.ctrl`
 - Copy `Packages.ctrl` To `Packages.git`
@@ -237,14 +228,47 @@ xdebug.remote_log=/tmp/xdebug.log
 > git config user.email Starli0n@users.noreply.com
 ```
 
-### Switch to Release mode `Packages.ctrl`
-- Run the shortcut `sublime_text_pkg.ctrl.bat`
+### Use Python [Plugin Debugger](https://sublime.wbond.net/packages/Plugin%20Debugger)
+- Install [Winpdb](http://winpdb.org/download)
+	- `python setup.py install --record winpdb.txt`
+- Install the [wxPython runtime](http://www.wxpython.org/download.php)
+- After the installation, change shortcuts in `PYDIR/Lib/site-packages/winpdb.py` to Visual Studio like
+````
+AC_CHAR = "\t"
+AC_EXIT = "Alt-X"
+AC_ANALYZE = "F3"
+AC_BREAK = "F4"
+AC_GO = "F5"
+AC_NEXT = "F10"
+AC_STEP = "F11"
+AC_GOTO = "Ctrl-F10"
+AC_TOOGLE = "F9"
+AC_RETURN = "Shift-F11"
+````
 
-### Switch to Dev mode `Packages.git`
-- Run the shortcut `sublime_text_pkg.git.bat`
 
-### Fetch all Git package
-- Run `Packages/User/Resources/Windows/PackageFetch.bat`
+[OSX] PACKAGE DEVELOPMENT
+-------------------------
+
+- Copy `Packages/User/Resources/OSX/Library/Services/• Sublime Packages.workflow` to `~/Library/Services/• Sublime Packages.workflow`
+- Switch to Release mode `Packages.ctrl`
+	- Right click on the folder and execute the service `• Sublime Packages.workflow`
+- Switch to Dev mode `Packages.git`
+	- Right click on the folder and execute the service `• Sublime Packages.workflow`
+
+
+[WIN] PACKAGE DEVELOPMENT
+-------------------------
+
+- Copy `Packages/User/Resources/Windows/bin/Junction.exe` To `C:\Tools\System\junction.exe`
+- Include the path `C:\Tools\System` to `%PATH%` Environment Variable
+- Copy `Data/Packages/User/Resources/Windows/InstallDir/Data/*` To `Data/*`
+- Switch to Release mode `Packages.ctrl`
+	- Run the shortcut `sublime_text_pkg.ctrl.bat`
+- Switch to Dev mode `Packages.git`
+	- Run the shortcut `sublime_text_pkg.git.bat`
+- Fetch all Git package
+	- Run `Packages/User/Resources/Windows/PackageFetch.bat`
 
 
 TIPS

@@ -44,6 +44,7 @@
 	discard = checkout -- # Modified (red) to Unmodified (-) status @filename
 	dd = checkout --
 	a = add # Modified (red) to Stage (green) status @filename [@filenamebis]
+	cp = cherry-pick # Pick the commit with @SHA
 	undo = reset --soft HEAD~
 	redo = reset --soft ORIG_HEAD
 	pop = reset --mixed HEAD~
@@ -71,6 +72,8 @@
 	ftu = fetch upstream master
 	fta = fetch --all
 	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
 	mg = merge
 	mgu = merge upstream/master
 	pom = push origin master # Push local commits to remote repository
