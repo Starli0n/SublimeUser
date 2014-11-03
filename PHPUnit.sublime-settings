@@ -6,7 +6,7 @@
     "phpunit_additional_args": {"--coverage-html": "./rapport"},
     "copy_env": true,
     "override_env": {},
-    "debug": 1,
+    "debug": 0,
     "path_to_phpunit": "/usr/local/bin/phpunit",
     "test_folder":  "UnitTest",
     "prefix_file": "mi",

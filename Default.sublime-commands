@@ -4,6 +4,10 @@
         "command": "save_eol"
     },
     {
+        "caption": "File: Trim trailing space",
+        "command": "trim_trailing_space"
+    },
+    {
         "caption": "Package Control: Open Url",
         "command": "package_open_url"
     },

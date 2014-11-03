@@ -5,7 +5,8 @@
         "id": "file",
         "children":
         [
-            { "command": "save_eol", "caption": "Save EOL…" }
+            { "command": "save_eol", "caption": "Save EOL…" },
+            { "command": "trim_trailing_space", "caption": "Trim trailing space" }
         ]
     },
     {
