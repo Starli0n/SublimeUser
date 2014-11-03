@@ -12,6 +12,10 @@
         "command": "package_open_url"
     },
     {
+        "caption": "Plugin Debugger: Run",
+        "command": "debug", "args": {"cmd": "echo", "message": "Hello World"}
+    },
+    {
         "caption": "User: Install",
         "command": "user_install"
     }

@@ -29,6 +29,9 @@
 	{"keys": ["alt+f6"], "command": "phpunit_open_test_class"},
 	{"keys": ["shift+alt+f6"], "command": "phpunit_open_class_being_tested"},
 
+	// Plugin Debugger
+	{"keys": ["ctrl+f5"], "command": "debug", "args": {"cmd": "echo", "message": "Hello World"} },
+
 	// Xdebug
 	{"keys": ["shift+f5"], "command": "xdebug" },
 	// {"keys": ["f8"], "command": "xdebug_continue" },
