@@ -21,9 +21,16 @@
             { "command": "open_url", "args": {"url": "https://www.wunderlist.com/#/lists/lw37aaa57590105d5279bcac19a4a6b6"}, "caption": "Wunderlist" },
             { "command": "open_url", "args": {"url": "https://c9.io/starli0n"}, "caption": "Cloud 9 IDE" },
             { "command": "open_url", "args": {"url": "http://starli0n.wikinet.org/wiki/Tools:ST"}, "caption": "WikiNet" },
-            { "command": "open_url", "args": {"url": "https://gist.github.com/Starli0n/9505558"}, "caption": "Git Hints" },
-            { "command": "open_file", "args": {"file": "/Z/Team.txt"}, "caption": "Team" },
-            { "command": "open_file", "args": {"file": "/Z/Travail.txt"}, "caption": "Travail" }
+            { "command": "open_url", "args": {"url": "https://gist.github.com/Starli0n/9505558"}, "caption": "Git Hints" }
+        ]
+    },
+    {
+        "caption": "Project",
+        "mnemonic": "P",
+        "id": "project",
+        "children":
+        [
+            { "command": "open_file", "args": {"file": "${packages}/../Settings/Session.sublime_session"}, "caption": "Session" }
         ]
     },
     {
