@@ -1,4 +1,5 @@
 import sublime, sublime_plugin
+import subprocess
 import os
 import shutil
 
@@ -21,6 +22,10 @@ class UserInstallCommand(sublime_plugin.TextCommand):
 		src = os.path.join(user_dir, 'Resources/Any/Default/exec.py')
 		dst = os.path.join(sublime.packages_path(), 'Default/exec.py')
 		self.copy_file_bak(src, dst)
+
+		src=os.path.join(user_dir, 'Resources/Any/src')
+		dst=os.path.join(user_dir, 'Resources/Any/bin')
+		self.compile(src, dst)
 
 		if sublime.platform() == "osx":
 			# Alias
@@ -74,6 +79,28 @@ class UserInstallCommand(sublime_plugin.TextCommand):
 		edit = v.begin_edit()
 		v.insert(edit, 0, self.m_log)
 		v.end_edit(edit)
+
+
+	def compile(self, src, dst):
+		try:
+			# Use ST Python Version
+			# compileall.compile_dir(src, force=True)
+			# Use OS Python Version
+			cmd = ['python', '-m', 'compileall', '-f', src]
+			subprocess.call(cmd, shell=True)
+			# Remove dst
+			if os.path.isdir(dst):
+				shutil.rmtree(dst)
+			# Copy compiled pyc files
+			shutil.copytree(src, dst, ignore=shutil.ignore_patterns('*.py'))
+			# Remove compiled pyc files from src
+			for root, dirs, files in os.walk(src):
+				for f in files:
+					fileName, fileExtension = os.path.splitext(f)
+					if fileExtension == '.pyc':
+						os.remove(os.path.join(root, f))
+		except:
+			print 'User: Install - Compile Error'
 
 
 	def alias(self, src, dst):

@@ -19,9 +19,6 @@ elif [ "$1" = "config" ] && [ "$#" -eq 2 ] ; then
 		error=1
 	else
 		ANYBIN=${BASEDIR}/../../Any/bin
-		if [ ! -f "${ANYBIN}/colorcfg.pyc" ]; then
-			"$PYBIN" -m py_compile "${ANYBIN}/colorcfg.py"
-		fi
 		"$PYBIN" "${ANYBIN}/colorcfg.pyc" "${HOMEDRIVE}${HOMEPATH}.gitconfig"
 		error=$?
 	fi
