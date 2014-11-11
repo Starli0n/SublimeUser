@@ -35,4 +35,4 @@ class SaveEolCommand(sublime_plugin.TextCommand):
 		self.view.window().show_quick_panel(menu_items, on_done)
 
 	def is_enabled(self):
-		return os.path.isfile(self.view.file_name())
+		return self.view.file_name() and len(self.view.file_name())

@@ -23,9 +23,10 @@ class UserInstallCommand(sublime_plugin.TextCommand):
 		dst = os.path.join(sublime.packages_path(), 'Default/exec.py')
 		self.copy_file_bak(src, dst)
 
-		src=os.path.join(user_dir, 'Resources/Any/src')
-		dst=os.path.join(user_dir, 'Resources/Any/bin')
-		self.compile(src, dst)
+		if sublime.platform() == "windows":
+			src=os.path.join(user_dir, 'Resources/Any/src')
+			dst=os.path.join(user_dir, 'Resources/Any/bin')
+			self.compile(src, dst)
 
 		if sublime.platform() == "osx":
 			# Alias
