@@ -10,7 +10,7 @@ export STPYSRC="$PACKAGE/User/Resources/Any/src"
 export CURL_CA_BUNDLE=/usr/local/share/ca-bundle.crt
 export XDEBUG_SESSION=sublime.xdebug
 export EDITOR='subl -a'
-
+export WORK=$HOME/Sites
 
 #############
 ### ALIAS ###
@@ -22,6 +22,7 @@ alias ..='cd ..'
 alias cd..='cd ..'
 alias pkg="cd $PACKAGE"
 alias pkgu="cd $PACKAGE/User"
+alias work='cd $WORK'
 alias ll='ls -l'
 alias path='echo -e ${PATH//:/\\n}'
 alias lib='echo -e ${LD_LIBRARY_PATH//:/\\n}'
