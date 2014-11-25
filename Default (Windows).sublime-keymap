@@ -4,6 +4,9 @@
 	// AgentRansack
 	{ "keys": ["ctrl+alt+f3"],  "command": "agent_ransack" },
 
+	// Camel_Snake
+	{ "keys": ["ctrl+alt+v"], "command": "camel_snake" },
+
 	// FileDiffs
 	{ "keys": ["ctrl+alt+d"],  "command": "file_diff_previous" },
 

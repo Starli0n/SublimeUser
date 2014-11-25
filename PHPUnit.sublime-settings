@@ -2,13 +2,12 @@
     "top_folder_hints": [ ".git", ".hg" ],
     "folder_exclusions": [ "branches", "nbproject", "tags", "vendor" ],
     "max_search_secs": 2,
-    "phpunit_xml_location_hints": [ "UnitTest" ],
-    "phpunit_additional_args": {"--coverage-html": "./rapport"},
+    "phpunit_xml_location_hints": [ "core", "UnitTest", "UnitTest/core"],
+    "phpunit_additional_args": {"--bootstrap": "autoload.php", "--coverage-html": "./rapport"},
     "copy_env": true,
     "override_env": {},
     "debug": 0,
-    "path_to_phpunit": "/usr/local/bin/phpunit",
-    "test_folder":  "UnitTest",
+    "path_to_phpunit": "phpunit",
     "prefix_file": "mi",
     "prefix_class": "mic"
 }

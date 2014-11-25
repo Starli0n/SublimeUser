@@ -8,6 +8,9 @@
 	{ "keys": ["super+ù"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 	{ "keys": ["super+;"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
 
+	// Camel_Snake
+	{ "keys": ["super+alt+v"], "command": "camel_snake" },
+
 	// FileDiffs
 	{ "keys": ["ctrl+super+d"],  "command": "file_diff_previous" },
 
