@@ -43,6 +43,7 @@ call :git_batch Git
 call :git_batch Open-Include
 call :git_batch package_control.git
 call :git_batch package_control_channel.git
+call :git_batch PHPUnit
 call :git_batch Slack
 call :git_batch TestSettings
 call :git_batch User
