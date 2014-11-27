@@ -45,6 +45,7 @@ call :git_batch package_control.git
 call :git_batch package_control_channel.git
 call :git_batch PHPUnit
 call :git_batch Slack
+call :git_batch Terminal
 call :git_batch TestSettings
 call :git_batch User
 call :git_batch Verbose
