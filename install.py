@@ -47,6 +47,10 @@ class UserInstallCommand(sublime_plugin.TextCommand):
 			self.alias(src, dst)
 
 			# Files to copy
+			src = os.path.join(user_dir, 'Resources/OSX/Applications/Sublime Add.app')
+			dst = '/Applications/Sublime Add.app'
+			self.copy_dir(src, dst)
+
 			src = os.path.join(user_dir, 'Resources/OSX/HOME/Library/Services/Copy Path to Clipboard.workflow')
 			dst = os.path.expandvars('$HOME/Library/Services/Copy Path to Clipboard.workflow')
 			self.copy_dir(src, dst)
