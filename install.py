@@ -55,6 +55,10 @@ class UserInstallCommand(sublime_plugin.TextCommand):
 			dst = os.path.expandvars('$HOME/Library/Services/Copy Path to Clipboard.workflow')
 			self.copy_dir(src, dst)
 
+			src = os.path.join(user_dir, 'Resources/OSX/HOME/Library/Services/Open Terminal Here....workflow')
+			dst = os.path.expandvars('$HOME/Library/Services/Open Terminal Here....workflow')
+			self.copy_dir(src, dst)
+
 			src = os.path.join(user_dir, 'Resources/OSX/HOME/Library/Widgets/HiddenFiles.wdgt')
 			dst = os.path.expandvars('$HOME/Library/Widgets/HiddenFiles.wdgt')
 			self.copy_dir(src, dst)
