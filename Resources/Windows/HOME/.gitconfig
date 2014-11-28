@@ -26,6 +26,8 @@
 	g = "!gitools.sh config .gitconfig" # Show me
 	cfg = config -e # Edit local config
 	gcfg = config --global -e # Edit global config
+	rep = config remote.origin.url
+	repu = config remote.upstream.url
 	s = "!gitools.sh shell" # Use git shell [@PARAMS]
 	la = "!git config --get-regexp alias | cut -c 7-"
 	up = remote add upstream # Add forked repo with all branches @URL
@@ -65,7 +67,7 @@
 	cim = commit -m # Commit with a command line message "@Message"
 	ciam = commit -am # Commit and add with a command line message "@Message"
 	cia = commit --amend # Amend last commit
-	ciaa = commit --amend --author # Amend last commit author @user.name <user.email>
+	ciaa = commit --amend --author # Amend last commit author "@user.name <user.email>"
 	sh = stash # Backup current modifications
 	shl = stash list # List saved modifications
 	shp = stash pop # Pop last modification
@@ -85,6 +87,10 @@
 	pom1 = push origin HEAD~1:master # Push commit except the last one
 	dt = difftool # (1) Diff between Staged and Modified or (2) [@OLDER_SHA @NEWER_SHA]
 	dtc = difftool --cached # Diff between Repo and Staged
+	dts = submodule foreach 'git difftool' # Submodule version
+	dtcs = submodule foreach 'git difftool --cached' # Submodule version
+	sdt = "!git difftool --cached && git submodule foreach 'git difftool --cached'" # Super difftool
+	sdtc = "!git difftool --cached && git submodule foreach 'git difftool --cached'" # Super difftool cached
 	dtl = difftool HEAD~1 HEAD # Diff between the two last commits
 	dtll = difftool --name-only # List of filename diff between @OLDER_SHA @NEWER_SHA
 	dtlll = difftool --name-only HEAD~1 HEAD # List of filename diff between the two last commits
