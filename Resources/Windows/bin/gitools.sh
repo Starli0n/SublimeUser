@@ -32,6 +32,8 @@ elif [ "$1" = "config" ] && [ "$#" -eq 2 ] ; then
 elif [ "$1" = "difftool" ] && [ "$#" -eq 3 ] ; then
 	if [ "$2" = "/dev/null" ] ; then
 		echo FileN : $3
+	elif [ "$3" = "/dev/null" ] ; then
+		echo FileD : $2
 	else
 		echo Launching WinMergeU.exe
 		echo FileL : $2
