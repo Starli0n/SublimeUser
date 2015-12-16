@@ -15,10 +15,18 @@
         "id": "tools",
         "children":
         [
+            { "caption": "-" },
+            { "command": "open_file", "args": {"file": "/C/Users/stheroude/.gitconfig"}, "caption": "Git Global Config" },
+            { "command": "open_file", "args": {"file": "/Z/Team.txt"}, "caption": "Team" },
+            { "command": "open_file", "args": {"file": "/D/Documents/Install/Install.txt"}, "caption": "Install" },
+            { "command": "open_file", "args": {"file": "/D/Tools/cmder_mini/config/aliases"}, "caption": "Aliases" },
+            { "command": "open_file", "args": {"file": "/D/Tools/System/config/w.bat"}, "caption": "Menu" },
+            { "command": "open_file", "args": {"file": "/C/Users/stheroude/AppData/Roaming/NuGet/NuGet.Config"}, "caption": "NuGet" },
+            { "caption": "-" },
             { "command": "git_custom", "args": {"command": "config user.name Starli0n;config user.email Starli0n@users.noreply.github.com"}, "caption": "Git Set User"},
             { "command": "open_url", "args": {"url": "https://github.com/Starli0n?tab=repositories"}, "caption": "GitHub" },
             { "command": "open_url", "args": {"url": "https://bitbucket.org/dashboard/overview"}, "caption": "BitBucket" },
-            { "command": "open_url", "args": {"url": "https://www.wunderlist.com/#/lists/lw37aaa57590105d5279bcac19a4a6b6"}, "caption": "Wunderlist" },
+            { "command": "open_url", "args": {"url": "https://www.wunderlist.com/#/lists/227600674"}, "caption": "Wunderlist" },
             { "command": "open_url", "args": {"url": "https://c9.io/starli0n"}, "caption": "Cloud 9 IDE" },
             { "command": "open_url", "args": {"url": "http://starli0n.wikinet.org/wiki/Tools:ST"}, "caption": "WikiNet" },
             { "command": "open_url", "args": {"url": "https://gist.github.com/Starli0n/9505558"}, "caption": "Git Hints" }
@@ -96,6 +104,7 @@
             { "command": "open_url", "args": {"url": "http://sublime-text-unofficial-documentation.readthedocs.org/en/sublime-text-2/index.html"}, "caption": "Unofficial Documentation" },
             { "command": "open_url", "args": {"url": "https://github.com/SublimeText/Issues"}, "caption": "Bug Tracking" },
             { "command": "open_url", "args": {"url": "http://www.sublimetext.com/forum"}, "caption": "Forum" },
+            { "command": "open_url", "args": {"url": "https://github.com/Starli0n/SublimeUser/blob/master/README.md"}, "caption": "SublimeUser" },
             {
                 "caption": "Git",
                 "children":

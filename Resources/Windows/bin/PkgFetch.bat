@@ -37,6 +37,7 @@ cd ../../../..
 echo CD=%cd%
 echo.
 call :git_batch AgentRansack
+call :git_batch Cmder
 call :git_batch Dos
 call :git_batch FileDiffs
 call :git_batch Git

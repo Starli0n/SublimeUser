@@ -4,6 +4,7 @@
 [core]
 	editor = 'C:\\Tools\\SublimeText\\sublime_text.exe' -w
 	askpass = git-gui--askpass
+	autocrlf = input
 	#pager = cat # Prevent keypress from log command or use git --no-pager
 [http]
 	sslverify = false

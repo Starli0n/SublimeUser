@@ -19,12 +19,12 @@ elif [ "$1" = "config" ] && [ "$#" -eq 2 ] ; then
 		error=1
 	else
 		ANYBIN=${BASEDIR}/../../Any/bin
-		"$PYBIN" "${ANYBIN}/colorcfg.pyc" "${HOMEDRIVE}${HOMEPATH}.gitconfig"
+		"$PYBIN" "${ANYBIN}/colorcfg.pyc" "${HOMEDRIVE}${HOMEPATH}\.gitconfig"
 		error=$?
 	fi
 
 	if [ "$error" -ne 0 ]; then
-		cat "${HOMEDRIVE}${HOMEPATH}.gitconfig"
+		cat "${HOMEDRIVE}${HOMEPATH}\.gitconfig"
 		echo Error=$error
 	fi
 
