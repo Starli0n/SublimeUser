@@ -141,12 +141,32 @@ xdebug.remote_log=/tmp/xdebug.log
 ````
 - Test the installation by searching for "XDebug" on a phpinfo() page
 
+### [WIN] Install XDebug with XAMPP
+- Download the right version of XDebug according your XAMPP version, prefer a TS one (TS stands for Thread Safe)
+ 	- https://xdebug.org/download.php
+- Copy the file to the ext location of PHP
+	- `C:\xampp\php\ext\php_xdebug.dll`
+- Open php.ini normaly there `C:\xampp\php\php.ini`
+- Append the following lines to the bottom of the file
+````
+[xdebug]
+zend_extension = "C:/xampp/php/ext/php_xdebug.dll"
+xdebug.idekey=sublime.xdebug
+xdebug.remote_enable=1
+xdebug.show_local_vars=1
+xdebug.remote_log=C:/xampp/php/logs/xdebug.log
+````
+- Add an environment variable
+	- `XDEBUG_SESSION=sublime.xdebug`
+- Restart Apache
+- Test the installation by searching for "XDebug" on a phpinfo() page
+
 ### Install Firefox Add-on
 - easy Xdebug
 	- https://addons.mozilla.org/en-US/firefox/addon/easy-xdebug-with-moveable-
 	- Change `Value of the debug cookie` to `sublime.xdebug`
 - LiveReload
-	- http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi
+	- https://addons.mozilla.org/en-US/firefox/addon/livereload/
 
 ### Apache
 - Restart service with `XDEBUG_SESSION=sublime.xdebug`
@@ -162,6 +182,25 @@ xdebug.remote_log=/tmp/xdebug.log
 	- `Start debugging` (Shift+F5)
 	- Save the file to debug to activate the live reloading
 - if the debug session does not work, restart Apache, Firefox and Sublime Text
+
+
+PHPUNIT
+-------
+
+PHPUnit requires the install of XDebug
+
+### [WIN] Install PHPUnit
+- Include the path `C:\Tools\System` to `%PATH%` Environment Variable
+- Include the path `C:\xampp\php` to `%PATH%` Environment Variable
+- Execute the following commands
+	- `C:\Tools\System>echo @php "%~dp0phpunit.phar" %* > phpunit.cmd`
+- Download the last version of PHPUnit
+	- https://phar.phpunit.de/phpunit.phar
+- Copy it to `C:\Tools\System\phpunit.phar`
+- Test the installation
+	- `phpunit --version`
+- Test PHPUnit with the following command on a configured project
+	- `phpunit --coverage-html=./report --bootstrap=./bootstrap.php`
 
 
 PACKAGE DEVELOPMENT

@@ -3,7 +3,7 @@
     "folder_exclusions": [ "branches", "nbproject", "tags", "vendor" ],
     "max_search_secs": 2,
     "phpunit_xml_location_hints": [ "src", "utest", "core/src", "core/utest" ],
-    "phpunit_additional_args": {"--bootstrap": "autoload.php", "--coverage-html": "./report"},
+    "phpunit_additional_args": {"--bootstrap": "./bootstrap.php", "--coverage-html": "./report"},
     "copy_env": true,
     "override_env": {},
     "debug": 0,
