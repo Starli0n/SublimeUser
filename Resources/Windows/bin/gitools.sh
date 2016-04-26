@@ -49,4 +49,14 @@ elif [ "$1" = "mergetool" ] && [ "$#" -eq 5 ] ; then
 	echo BASE__ : $4
 	echo MERGED : $5
 	BCompare.exe "$2" "$3" "$4" "$5"
+
+# Log Feature
+elif [ "$1" = "logfeature" ] && [ "$#" -eq 2 ] ; then
+	PARENT=`git rev-parse --short "$2^2"`
+	if [ "$?" -eq 0 ]; then
+		git ll $PARENT
+	else
+		echo "(No 2nd parent found for this commit)"
+	fi
+
 fi

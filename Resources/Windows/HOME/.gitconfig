@@ -33,12 +33,14 @@
 	la = "!git config --get-regexp alias | cut -c 7-"
 	up = remote add upstream # Add forked repo with all branches @URL
 	upm = remote add --track master upstream # Add forked repo @URL
-	ll = log --pretty=oneline --abbrev-commit --graph --decorate --all # Smart log
+	ll = log --pretty=oneline --color --abbrev-commit --graph --decorate --first-parent # Smart log current branch
+	lla = log --pretty=oneline --color --abbrev-commit --graph --decorate --all # Smart log
 	llx = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 # Show the commit of the @SHA
 	llh = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 HEAD
 	llm = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 master
 	llo = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 origin/master
 	llu = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 upstream/master
+	llf = "!gitools.sh logfeature" # Log Merged feature of @SHA
 	last = log -1 HEAD # Last log
 	get = rev-parse --short # Get short @SHA (ex: git get HEAD~1)
 	f = "!git ls-files | grep -i" # Find path of @filename
@@ -83,9 +85,12 @@
 	rbu = rebase upstream/master
 	mg = merge
 	mgu = merge upstream/master
+	po = push origin master # Push local commits to remote repository branch @BRANCH_NAME
 	pom = push origin master # Push local commits to remote repository
 	pomf = push origin master --force # Force push
 	pom1 = push origin HEAD~1:master # Push commit except the last one
+	puo = push -u origin # Push branch @BRANCH_NAME
+	pod = push origin --delete # Delete remote branch @BRANCH_NAME
 	dt = difftool # (1) Diff between Staged and Modified or (2) [@OLDER_SHA @NEWER_SHA]
 	dtc = difftool --cached # Diff between Repo and Staged
 	dts = submodule foreach 'git difftool' # Submodule version

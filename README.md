@@ -192,7 +192,7 @@ PHPUnit requires the install of XDebug
 ### [WIN] Install PHPUnit
 - Include the path `C:\Tools\System` to `%PATH%` Environment Variable
 - Include the path `C:\xampp\php` to `%PATH%` Environment Variable
-- Execute the following commands
+- Execute the following command
 	- `C:\Tools\System>echo @php "%~dp0phpunit.phar" %* > phpunit.cmd`
 - Download the last version of PHPUnit
 	- https://phar.phpunit.de/phpunit.phar
@@ -201,6 +201,36 @@ PHPUnit requires the install of XDebug
 	- `phpunit --version`
 - Test PHPUnit with the following command on a configured project
 	- `phpunit --coverage-html=./report --bootstrap=./bootstrap.php`
+
+
+COMPOSER
+--------
+
+### [WIN] Install Composer
+- Include the path `C:\Tools\System` to `%PATH%` Environment Variable
+- Execute the following command
+	- `echo @php "%~dp0composer.phar" %*>composer.cmd`
+- Setup proxy without `http(s)://` if needed
+````
+@set HTTP_PROXY=<proxy>:<port>
+@set HTTPS_PROXY=<proxy>:<port>
+````
+- Execute the following commands in `C:\Tools\System`
+````
+> php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
+> php -r "if (hash('SHA384', file_get_contents('composer-setup.php')) === 'fd26ce67e3b237fffd5e5544b45b0d92c41a4afe3e3f778e942e43ce6be197b9cdc7c251dcde6e2a52297ea269370680') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); }"
+> php composer-setup.php
+> php -r "unlink('composer-setup.php');"
+````
+- Test the installation
+	- `composer --version`
+- Basic commands
+````
+> composer init
+> composer install
+> composer update
+> composer dump-autoload -o
+````
 
 
 PACKAGE DEVELOPMENT
