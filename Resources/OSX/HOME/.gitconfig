@@ -71,6 +71,7 @@
 	cim = commit -m # Commit with a command line message "@Message"
 	ciam = commit -am # Commit and add with a command line message "@Message"
 	cia = commit --amend # Amend last commit
+	cian = commit --amend --no-edit # Amend last commit without changing message
 	ciaa = commit --amend --author # Amend last commit author "@user.name <user.email>"
 	sh = stash # Backup current modifications
 	shl = stash list # List saved modifications
@@ -91,6 +92,8 @@
 	pomf = push origin master --force # Force push
 	pom1 = push origin HEAD~1:master # Push commit except the last one
 	puo = push -u origin # Push branch @BRANCH_NAME
+	pup = push -u origin gh-pages
+	pupf = push -u origin gh-pages --force
 	pod = push origin --delete # Delete remote branch @BRANCH_NAME
 	dt = difftool # (1) Diff between Staged and Modified or (2) [@OLDER_SHA @NEWER_SHA]
 	dtc = difftool --cached # Diff between Repo and Staged
