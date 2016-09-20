@@ -35,9 +35,10 @@ elif [ "$1" = "difftool" ] && [ "$#" -eq 3 ] ; then
 	elif [ "$3" = "/dev/null" ] ; then
 		echo FileD : $2
 	else
-		echo Launching WinMergeU.exe
-		echo FileL : $2
-		echo FileR : $3
+		echo Comparing...
+		echo "   Left : $2"
+		echo "  Right : $3"
+		echo
 		"C:\Program Files (x86)\WinMerge\WinMergeU.exe" -e -ub -dl "Base" -dr "Mine" "$2" "$3"
 	fi
 

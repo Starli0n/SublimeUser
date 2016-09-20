@@ -16,9 +16,10 @@ elif [ "$1" = "difftool" ] && [ "$#" -eq 3 ] ; then
 	elif [ "$3" = "/dev/null" ] ; then
 		echo FileD : $2
 	else
-		echo Launching bcomp
-		echo FileL : $2
-		echo FileR : $3
+		echo Comparing...
+		echo "   Left : $2"
+		echo "  Right : $3"
+		echo
 		"/usr/local/bin/bcomp" "$2" "$3"
 	fi
 
