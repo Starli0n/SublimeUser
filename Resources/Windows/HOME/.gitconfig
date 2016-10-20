@@ -37,7 +37,7 @@
 	upm = remote add --track master upstream # Add forked repo @URL
 
 	ll = log --pretty=oneline --color --abbrev-commit --graph --decorate --first-parent # Smart log current branch
-	lla = log --pretty=oneline --color --abbrev-commit --graph --decorate --all # Smart log
+	la = log --pretty=oneline --color --abbrev-commit --graph --decorate --all # Smart log
 	llx = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 # Show the commit of the @SHA
 	llh = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 HEAD
 	llm = !git --no-pager log --pretty=oneline --abbrev-commit --decorate -1 master
