@@ -52,12 +52,13 @@ https://github.com/Starli0n/FireSublimeText
 -------------
 
 ### Create some alias
-````
-ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.gitconfig" "$HOME/.gitconfig"
-ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.bash_profile" "$HOME/.bash_profile"
-ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.MacOSX" "$HOME/.MacOSX"
-````
+```
+> ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+> ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.gitconfig" "$HOME/.gitconfig"
+> ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.bash_profile" "$HOME/.bash_profile"
+> ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.MacOSX" "$HOME/.MacOSX"
+> ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/Any/HOME/.ssh/config" "$HOME/.ssh/config"
+```
 
 ### Customize Finder toolbar to open file in Sublime Text
 - TODO
@@ -94,7 +95,14 @@ ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/
 - Add syntax highlighting for Git global config (Require Python) (> git g)
 
 ### Create an alias `.gitconfig`
-`mklink  %HOMEDRIVE%%HOMEPATH%.gitconfig C:\Tools\SublimeText\Data\Packages\User\Resources\Windows\HOME\.gitconfig`
+`> mklink  %HOME%\.gitconfig C:\Tools\SublimeText\Data\Packages\User\Resources\Windows\HOME\.gitconfig`
+
+### Create aliases to use bash
+```
+> mklink %HOME%\.bashrc C:\Tools\SublimeText\Data\Packages\User\Resources\OSX\HOME\.bash_profile
+> mklink %HOME%\.ssh\config C:\Tools\SublimeText\Data\Packages\User\Resources\Any\HOME\.ssh\config
+> junction %HOME%\.MacOSX C:\Tools\SublimeText\Data\Packages\User\Resources\OSX\HOME\.MacOSX
+```
 
 ### Add Sublime Text to the right click context menu
 - Edit the file `Packages/User/Resources/Windows/Tools/SublimeTextRightClickContextMenu.reg`
@@ -124,21 +132,21 @@ XDEBUG
 - Drag & Drop "xdebug.so" file to this directory
 - Open php.ini normaly there `/private/etc/php.ini`
 - Append the following lines to the bottom of the file
-````
+```
 [xdebug]
 zend_extension=/usr/lib/php/extensions/no-debug-non-zts-20090626/xdebug.so
 xdebug.idekey=sublime.xdebug
 xdebug.remote_enable=1
 xdebug.show_local_vars=1
 xdebug.remote_log=/tmp/xdebug.log
-````
+```
 - Tweak configuration setting
 	- http://xdebug.org/docs/all_settings
 - Restart the Apache web server from a terminal
-````
+```
 > export XDEBUG_SESSION=sublime.xdebug
 > sudo /usr/sbin/apachectl restart
-````
+```
 - Test the installation by searching for "XDebug" on a phpinfo() page
 
 ### [WIN] Install XDebug with XAMPP
@@ -148,14 +156,14 @@ xdebug.remote_log=/tmp/xdebug.log
 	- `C:\xampp\php\ext\php_xdebug.dll`
 - Open php.ini normaly there `C:\xampp\php\php.ini`
 - Append the following lines to the bottom of the file
-````
+```
 [xdebug]
 zend_extension = "C:/xampp/php/ext/php_xdebug.dll"
 xdebug.idekey=sublime.xdebug
 xdebug.remote_enable=1
 xdebug.show_local_vars=1
 xdebug.remote_log=C:/xampp/php/logs/xdebug.log
-````
+```
 - Add an environment variable
 	- `XDEBUG_SESSION=sublime.xdebug`
 - Restart Apache
@@ -211,26 +219,26 @@ COMPOSER
 - Execute the following command
 	- `echo @php "%~dp0composer.phar" %*>composer.cmd`
 - Setup proxy without `http(s)://` if needed
-````
+```
 @set HTTP_PROXY=<proxy>:<port>
 @set HTTPS_PROXY=<proxy>:<port>
-````
+```
 - Execute the following commands in `C:\Tools\System`
-````
+```
 > php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
 > php -r "if (hash('SHA384', file_get_contents('composer-setup.php')) === 'fd26ce67e3b237fffd5e5544b45b0d92c41a4afe3e3f778e942e43ce6be197b9cdc7c251dcde6e2a52297ea269370680') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); }"
 > php composer-setup.php
 > php -r "unlink('composer-setup.php');"
-````
+```
 - Test the installation
 	- `composer --version`
 - Basic commands
-````
+```
 > composer init
 > composer install
 > composer update
 > composer dump-autoload -o
-````
+```
 
 
 PACKAGE DEVELOPMENT
@@ -302,7 +310,7 @@ PACKAGE DEVELOPMENT
 	- `python setup.py install --record winpdb.txt`
 - Install the [wxPython runtime](http://www.wxpython.org/download.php)
 - After the installation, change shortcuts in `PYDIR/Lib/site-packages/winpdb.py` to Visual Studio like
-````
+```
 AC_CHAR = "\t"
 AC_EXIT = "Alt-X"
 AC_ANALYZE = "F3"
@@ -313,7 +321,7 @@ AC_STEP = "F11"
 AC_GOTO = "Ctrl-F10"
 AC_TOOGLE = "F9"
 AC_RETURN = "Shift-F11"
-````
+```
 
 
 [OSX] PACKAGE DEVELOPMENT

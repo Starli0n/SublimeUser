@@ -87,6 +87,7 @@
 	shi = stash --patch # Interactive mode
 	shl = stash list # List saved modifications
 	shp = stash pop # Pop last modification
+	shd = !sh -c 'git stash drop stash@{$1}' - # Drop @STASH_ID
 	shs = stash save # Save @STASH_NAME
 	sha = !sh -c 'git stash apply stash@{$1}' - # Apply @STASH_ID
 

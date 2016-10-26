@@ -4,19 +4,9 @@
         { "Packages": [ "/Users/Starli0n/Library/Application Support/Sublime Text 2/Packages/" ]},
         { "Packages.ctrl": [ "/Users/Starli0n/Library/Application Support/Sublime Text 2/Packages.ctrl/" ]},
         { "Packages.git": [ "/Users/Starli0n/Library/Application Support/Sublime Text 2/Packages.git/" ]},
-        { "Packages": [ "C:\\Tools\\SublimeText\\Data\\Packages\\" ] },
-        { "Packages.ctrl": [ "C:\\Tools\\SublimeText\\Data\\Packages.ctrl\\" ]},
-        { "Packages.git": [ "C:\\Tools\\SublimeText\\Data\\Packages.git\\" ]},
-        { "Prod"	: [ "\\\\sudexp\\summit\\SudExp\\client\\ccffo\\", "\\\\sud\\summit\\SudExp\\client\\ccffo\\" ]},
-        { "Pre"		: [ "\\\\sudd03\\Summitdev3\\SudPre\\client\\ccffo\\" ]},
-        { "Pre RW"	: [ "\\\\sudd03\\Summitdev3\\SudPre\\client\\ccfforw\\" ]},
-        { "Pre PLS"	: [ "\\\\sudd03\\Summitdev3\\SudPre\\client\\CcfFoPLS\\" ]},
-        { "MU" : [ "\\\\sudd03\\summitdev7\\Suddev7\\client\\ccffoMU\\" ]},
-        { "CR" : [ "Z:\\Request\\CR_RecSummitPLS\\CcfFo\\" ]},
-        { "RTC Prod": [ "S:\\RTC\\PROD\\SCRIPTS\\nas0015\\SUMMIT\\SudExp\\client\\ccffo\\" ]},
-        { "RTC RTB": [ "S:\\RTC\\RTB\\SCRIPTS\\nas0015\\SUMMIT\\SudExp\\client\\ccffo\\" ]},
-        { "Prod": [ "S:\\RTC\\PROD\\" ]},
-        { "RTB": [ "S:\\RTC\\RTB\\" ]}
+        { "Packages": [ "D:\\Tools\\SublimeText\\Data\\Packages\\" ] },
+        { "Packages.ctrl": [ "D:\\Tools\\SublimeText\\Data\\Packages.ctrl\\" ]},
+        { "Packages.git": [ "D:\\Tools\\SublimeText\\Data\\Packages.git\\" ]}
     ],
     "expand_alias": false
 }
