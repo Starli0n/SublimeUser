@@ -53,6 +53,7 @@ if [ "$(uname)" == "Darwin" ]; then
     export EDITOR='subl'
     export PACKAGE="$HOME/Library/Application\ Support/Sublime\ Text\ 2/Packages"
     export TOOLS="$HOME/Tools"
+    export PS1="\n$BLUE\u$CYAN@$GREEN\w $RED\$(git branch 2> /dev/null)\n${YELLOW}λ $NORMAL"
 # elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 # elif [ "$(expr substr $(uname -s) 1 5)" == "MINGW" ]; then
 else
