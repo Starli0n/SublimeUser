@@ -53,10 +53,11 @@ https://github.com/Starli0n/FireSublimeText
 
 ### Create some alias
 ```
-> ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+> sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 > ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.gitconfig" "$HOME/.gitconfig"
 > ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.bash_profile" "$HOME/.bash_profile"
 > ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/OSX/HOME/.MacOSX" "$HOME/.MacOSX"
+> mkdir "$HOME/.ssh/"
 > ln -s "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Resources/Any/HOME/.ssh/config" "$HOME/.ssh/config"
 ```
 

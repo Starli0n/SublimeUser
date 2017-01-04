@@ -108,7 +108,7 @@
 	pom = push origin master # Push local commits to remote repository
 	pomf = push origin master --force # Force push
 	pogp = push origin gh-pages # Push to GitHub pages
-	pogpf = push origin gh-pages # Force push to GitHub pages
+	pogpf = push origin gh-pages --force # Force push to GitHub pages
 	pom1 = push origin HEAD~1:master # Push commit except the last one
 	pomf1 = push origin HEAD~1:master --force # Force push commit except the last one
 	puo = push -u origin # Push branch @BRANCH_NAME

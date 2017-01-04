@@ -1,5 +1,7 @@
 [
 	{ "keys": ["ctrl+."], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+	{ "keys": ["super+alt+right"], "command": "next_view" },
+	{ "keys": ["super+alt+left"], "command": "prev_view" },
 
 	// AgentRansack
 	{ "keys": ["ctrl+alt+f3"],  "command": "agent_ransack" },
